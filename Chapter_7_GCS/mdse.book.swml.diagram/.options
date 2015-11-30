@@ -1,0 +1,7 @@
+# Tracing options for the mdse.book.swml.diagram plug-in
+
+# Common issues
+mdse.book.swml.diagram/debug=false
+
+# Visual IDs
+mdse.book.swml.diagram/debug/visualID=false

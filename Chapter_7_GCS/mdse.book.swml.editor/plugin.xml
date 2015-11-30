@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="swml.presentation.SwmlModelWizardID"
+            name="%_UI_SwmlModelWizard_label"
+            class="swml.presentation.SwmlModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SwmlModelFile.gif">
+         <description>%_UI_SwmlModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="swml.presentation.SwmlEditorID"
+            name="%_UI_SwmlEditor_label"
+            icon="icons/full/obj16/SwmlModelFile.gif"
+            extensions="swml"
+            class="swml.presentation.SwmlEditor"
+            contributorClass="swml.presentation.SwmlActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

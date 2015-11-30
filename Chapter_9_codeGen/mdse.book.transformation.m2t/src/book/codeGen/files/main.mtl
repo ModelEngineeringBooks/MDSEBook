@@ -1,0 +1,12 @@
+[comment encoding = UTF-8 /]
+[module main('http://www.mdse-book.org/smvcml')/]
+
+[import book::codeGen::files::generateJavaClass/]
+
+
+[template public mainClass(aModel : Model)]
+	
+	[comment @main /]
+	[aModel.classes.javaClass()/]
+	
+[/template]

@@ -1,0 +1,44 @@
+[comment encoding = UTF-8 /]
+[module generateJavaClass('http://www.mdse-book.org/smvcml')]
+
+[query public getter(att : Attribute) : String = 'get'+att.name.toUpperFirst() /]
+
+[query public returnStatement(type: String) : String = if type = 'Boolean' then 'return true;' else '...' endif  /]
+
+[template public javaClass(aClass : Class)]
+
+[file (aClass.name.toUpperFirst()+'.java', false, 'UTF-8')]
+package webapp.entities;
+
+import java.io.Serializable;
+
+public class [aClass.name/] implements Serializable {
+
+[for (att : Attribute | aClass.atts) separator ('\n')]
+[javaAttribute(att)/]
+[/for]
+
+[for (op : Operation | aClass.ops) separator ('\n')]
+[javaMethod(op)/]
+[/for]
+
+}
+[/file]
+[/template]
+
+[template public javaAttribute(att : Attribute)]
+	private [att.type/] [att.name/];
+
+	public [att.type/] [att.getter()/]() {
+		return [att.name/];
+	}	
+[/template]
+
+[template public javaMethod(op : Operation)]
+	public [op.type/] [op.name/]() {
+		// [protected (op.name)]
+		// Fill in the operation implementation here!
+		[returnStatement(op.type)/]
+		// [/protected]
+	}
+[/template]

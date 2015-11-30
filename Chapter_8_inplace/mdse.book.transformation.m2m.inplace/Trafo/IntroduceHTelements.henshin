@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:TransformationSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin">
+  <rules name="IntroduceHTelements">
+    <lhs name="LHS">
+      <nodes incoming="//@rules.0/@lhs/@edges.3" outgoing="//@rules.0/@lhs/@edges.4">
+        <type href="sWML.ecore#//ContentLayer"/>
+      </nodes>
+      <nodes incoming="//@rules.0/@lhs/@edges.2" outgoing="//@rules.0/@lhs/@edges.0 //@rules.0/@lhs/@edges.1">
+        <type href="sWML.ecore#//HypertextLayer"/>
+      </nodes>
+      <nodes incoming="//@rules.0/@lhs/@edges.0 //@rules.0/@lhs/@edges.1">
+        <type href="sWML.ecore#//StaticPage"/>
+      </nodes>
+      <nodes outgoing="//@rules.0/@lhs/@edges.2 //@rules.0/@lhs/@edges.3">
+        <type href="sWML.ecore#//WebModel"/>
+      </nodes>
+      <nodes name="c1" incoming="//@rules.0/@lhs/@edges.4">
+        <type href="sWML.ecore#//Class"/>
+      </nodes>
+      <edges source="//@rules.0/@lhs/@nodes.1" target="//@rules.0/@lhs/@nodes.2">
+        <type href="sWML.ecore#//HypertextLayer/pages"/>
+      </edges>
+      <edges source="//@rules.0/@lhs/@nodes.1" target="//@rules.0/@lhs/@nodes.2">
+        <type href="sWML.ecore#//HypertextLayer/homePage"/>
+      </edges>
+      <edges source="//@rules.0/@lhs/@nodes.3" target="//@rules.0/@lhs/@nodes.1">
+        <type href="sWML.ecore#//WebModel/hypertext"/>
+      </edges>
+      <edges source="//@rules.0/@lhs/@nodes.3" target="//@rules.0/@lhs/@nodes.0">
+        <type href="sWML.ecore#//WebModel/content"/>
+      </edges>
+      <edges source="//@rules.0/@lhs/@nodes.0" target="//@rules.0/@lhs/@nodes.4">
+        <type href="sWML.ecore#//ContentLayer/classes"/>
+      </edges>
+    </lhs>
+    <rhs name="RHS">
+      <nodes incoming="//@rules.0/@rhs/@edges.7" outgoing="//@rules.0/@rhs/@edges.8">
+        <type href="sWML.ecore#//ContentLayer"/>
+      </nodes>
+      <nodes incoming="//@rules.0/@rhs/@edges.6" outgoing="//@rules.0/@rhs/@edges.0 //@rules.0/@rhs/@edges.1 //@rules.0/@rhs/@edges.2 //@rules.0/@rhs/@edges.5">
+        <type href="sWML.ecore#//HypertextLayer"/>
+      </nodes>
+      <nodes incoming="//@rules.0/@rhs/@edges.0 //@rules.0/@rhs/@edges.1">
+        <type href="sWML.ecore#//StaticPage"/>
+      </nodes>
+      <nodes incoming="//@rules.0/@rhs/@edges.3" outgoing="//@rules.0/@rhs/@edges.4">
+        <type href="sWML.ecore#//CLink"/>
+      </nodes>
+      <nodes name="ip" incoming="//@rules.0/@rhs/@edges.2" outgoing="//@rules.0/@rhs/@edges.3 //@rules.0/@rhs/@edges.9">
+        <type href="sWML.ecore#//IndexPage"/>
+      </nodes>
+      <nodes name="dp" incoming="//@rules.0/@rhs/@edges.4 //@rules.0/@rhs/@edges.5" outgoing="//@rules.0/@rhs/@edges.10">
+        <type href="sWML.ecore#//DetailsPage"/>
+      </nodes>
+      <nodes outgoing="//@rules.0/@rhs/@edges.6 //@rules.0/@rhs/@edges.7">
+        <type href="sWML.ecore#//WebModel"/>
+      </nodes>
+      <nodes incoming="//@rules.0/@rhs/@edges.8 //@rules.0/@rhs/@edges.9 //@rules.0/@rhs/@edges.10">
+        <type href="sWML.ecore#//Class"/>
+      </nodes>
+      <edges source="//@rules.0/@rhs/@nodes.1" target="//@rules.0/@rhs/@nodes.2">
+        <type href="sWML.ecore#//HypertextLayer/pages"/>
+      </edges>
+      <edges source="//@rules.0/@rhs/@nodes.1" target="//@rules.0/@rhs/@nodes.2">
+        <type href="sWML.ecore#//HypertextLayer/homePage"/>
+      </edges>
+      <edges source="//@rules.0/@rhs/@nodes.1" target="//@rules.0/@rhs/@nodes.4">
+        <type href="sWML.ecore#//HypertextLayer/pages"/>
+      </edges>
+      <edges source="//@rules.0/@rhs/@nodes.4" target="//@rules.0/@rhs/@nodes.3">
+        <type href="sWML.ecore#//Page/links"/>
+      </edges>
+      <edges source="//@rules.0/@rhs/@nodes.3" target="//@rules.0/@rhs/@nodes.5">
+        <type href="sWML.ecore#//Link/target"/>
+      </edges>
+      <edges source="//@rules.0/@rhs/@nodes.1" target="//@rules.0/@rhs/@nodes.5">
+        <type href="sWML.ecore#//HypertextLayer/pages"/>
+      </edges>
+      <edges source="//@rules.0/@rhs/@nodes.6" target="//@rules.0/@rhs/@nodes.1">
+        <type href="sWML.ecore#//WebModel/hypertext"/>
+      </edges>
+      <edges source="//@rules.0/@rhs/@nodes.6" target="//@rules.0/@rhs/@nodes.0">
+        <type href="sWML.ecore#//WebModel/content"/>
+      </edges>
+      <edges source="//@rules.0/@rhs/@nodes.0" target="//@rules.0/@rhs/@nodes.7">
+        <type href="sWML.ecore#//ContentLayer/classes"/>
+      </edges>
+      <edges source="//@rules.0/@rhs/@nodes.4" target="//@rules.0/@rhs/@nodes.7">
+        <type href="sWML.ecore#//DynamicPage/displayedClass"/>
+      </edges>
+      <edges source="//@rules.0/@rhs/@nodes.5" target="//@rules.0/@rhs/@nodes.7">
+        <type href="sWML.ecore#//DynamicPage/displayedClass"/>
+      </edges>
+    </rhs>
+    <mappings origin="//@rules.0/@lhs/@nodes.0" image="//@rules.0/@rhs/@nodes.0"/>
+    <mappings origin="//@rules.0/@lhs/@nodes.1" image="//@rules.0/@rhs/@nodes.1"/>
+    <mappings origin="//@rules.0/@lhs/@nodes.2" image="//@rules.0/@rhs/@nodes.2"/>
+    <mappings origin="//@rules.0/@lhs/@nodes.3" image="//@rules.0/@rhs/@nodes.6"/>
+    <mappings origin="//@rules.0/@lhs/@nodes.4" image="//@rules.0/@rhs/@nodes.7"/>
+  </rules>
+  <imports href="sWML.ecore#/"/>
+</henshin:TransformationSystem>

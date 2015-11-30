@@ -1,0 +1,77 @@
+@namespace(uri="http://www.mdse-book.org/swml/", prefix="swml")
+@gmf(foo="bar")
+package swml;
+
+@gmf.diagram(foo="bar")
+class WebModel {
+  @gmf.compartment(foo="bar")
+  val HypertextLayer[1] hypertext;
+  @gmf.compartment(foo="bar")
+  val ContentLayer[1] content;
+  attr String[1] name;
+}
+
+@gmf.node(label="Hypertext", figure=rectangle)
+class HypertextLayer {
+  @gmf.compartment(foo="bar")
+  val Page[+] pages;
+  ref Page[1] homePage;
+}
+
+@gmf.node(label="Content", figure=rectangle)
+class ContentLayer {
+  @gmf.compartment(foo="bar")
+  val Class[+] classes;
+}
+
+@gmf.node(label="name", figure=rectangle)
+class Class {
+  val Attribute[+] attributes;
+  ref Attribute[1] representativeAttribute;
+  attr String[1] name;
+}
+
+class Attribute {
+  attr String[1] name;
+  attr SWMLTypes[1] type;
+}
+
+@gmf.node(label="name", figure=rounded)
+abstract class Page {
+  attr String[1] name;
+  val Link[*] links;
+}
+
+class IndexPage extends DynamicPage {
+  attr int size;
+}
+
+class DetailsPage extends DynamicPage {
+}
+
+abstract class DynamicPage extends Page {
+  ref Class[1] displayedClass;
+}
+
+class StaticPage extends Page {
+}
+
+@gmf.link(target="target", style="solid", target.decoration="filledclosedarrow")
+abstract class Link {
+  ref Page[1] target;
+}
+
+class NCLink extends Link {
+}
+
+class CLink extends Link {
+}
+
+enum SWMLTypes {
+  Boolean = 0;
+  String = 1;
+  Integer = 2;
+  Float = 3;
+  Email = 4;
+}
+

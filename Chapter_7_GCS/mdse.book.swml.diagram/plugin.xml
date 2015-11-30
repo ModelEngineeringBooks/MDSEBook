@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+
+-->
+<plugin>
+
+   <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
+      <?gmfgen generated="true"?>
+      <fileTypes type="text" extension="swml_diagram"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
+      <?gmfgen generated="true"?>
+      <parser
+         type="swml_diagram"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors" id="gmf-editor">
+      <?gmfgen generated="true"?>
+      <editor
+         id="swml.diagram.part.SwmlDiagramEditorID"
+         name="%editorName"
+         icon="icons/obj16/SwmlDiagramFile.gif"
+         extensions="swml_diagram"
+         default="true"
+         class="swml.diagram.part.SwmlDiagramEditor"
+         matchingStrategy="swml.diagram.part.SwmlMatchingStrategy"
+         contributorClass="swml.diagram.part.SwmlDiagramActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.contexts" id="ui-context">
+      <?gmfgen generated="true"?>
+      <context
+         description="%context.description"
+         id="swml.diagram.ui.diagramContext"
+         name="%context.name"
+         parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
+      </context>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards" id="creation-wizard">
+      <?gmfgen generated="true"?>
+  	  <wizard
+  	     name="%newWizardName"
+  	     icon="icons/obj16/SwmlDiagramFile.gif"
+  	     category="org.eclipse.ui.Examples"
+  	     class="swml.diagram.part.SwmlCreationWizard"
+  	     id="swml.diagram.part.SwmlCreationWizardID">
+  	  	 <description>%newWizardDesc</description>  
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
+      <?gmfgen generated="true"?>
+      <objectContribution
+            id="mdse.book.swml.diagram.InitDiagram"
+            nameFilter="*.swml"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="%initDiagramActionLabel"
+               class="swml.diagram.part.SwmlInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="mdse.book.swml.diagram.InitDiagramAction">
+         </action>
+      </objectContribution>
+   </extension>
+	
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders" id="global-actions">
+      <?gmfgen generated="true"?>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="SwmlPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="swml.diagram.part.SwmlDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="save">
+               </GlobalActionId>
+            </ElementType>        
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.printing.render.providers.DiagramWithPrintGlobalActionHandlerProvider"
+         id="SwmlPresentationPrint">
+         <Priority name="Lowest"/>
+         <ViewId id="swml.diagram.part.SwmlDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="print"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="SwmlPresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="swml.diagram.part.SwmlDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="SwmlRender">
+         <Priority name="Lowest"/>
+         <ViewId id="swml.diagram.part.SwmlDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+   </extension>
+
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.markerNavigationProviders" id="markers-navigation">
+      <?gmfgen generated="true"?>
+      <MarkerNavigationProvider class="swml.diagram.providers.SwmlMarkerNavigationProvider">
+         <MarkerType name="mdse.book.swml.diagram.diagnostic"/>
+         <Priority name="Lowest"/>
+      </MarkerNavigationProvider>
+   </extension>
+
+   <extension id="diagnostic" name="Swml Plugin problems" point="org.eclipse.core.resources.markers">
+      <?gmfgen generated="true"?>
+      <super type="org.eclipse.core.resources.problemmarker"/>
+      <super type="org.eclipse.gmf.runtime.common.ui.services.marker"/>
+      <persistent value="true"/>
+   </extension>   
+
+   <extension id="validationDecoratorProvider" name="ValidationDecorations" point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders">
+      <?gmfgen generated="true"?>
+      <decoratorProvider class="swml.diagram.providers.SwmlValidationDecoratorProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.diagram.ui.editparts.IPrimaryEditPart(org.eclipse.gmf.runtime.diagram.ui)" id="PRIMARY_VIEW"/>
+         <context decoratorTargets="PRIMARY_VIEW"/>
+      </decoratorProvider>
+   </extension>
+
+   <extension point="org.eclipse.core.runtime.preferences" id="prefs">
+      <?gmfgen generated="true"?>
+      <initializer class="swml.diagram.preferences.DiagramPreferenceInitializer"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages" id="prefpages">
+      <?gmfgen generated="true"?>
+      <page
+            id="mdse.book.swml.diagram.general"
+            name="%prefpage.mdse.book.swml.diagram.general"
+            class="swml.diagram.preferences.DiagramGeneralPreferencePage">
+      </page>
+      <page
+            id="mdse.book.swml.diagram.appearance"
+            name="%prefpage.mdse.book.swml.diagram.appearance"
+            category="mdse.book.swml.diagram.general"
+            class="swml.diagram.preferences.DiagramAppearancePreferencePage">
+      </page>
+      <page
+            id="mdse.book.swml.diagram.connections"
+            name="%prefpage.mdse.book.swml.diagram.connections"
+            category="mdse.book.swml.diagram.general"
+            class="swml.diagram.preferences.DiagramConnectionsPreferencePage">
+      </page>
+      <page
+            id="mdse.book.swml.diagram.printing"
+            name="%prefpage.mdse.book.swml.diagram.printing"
+            category="mdse.book.swml.diagram.general"
+            class="swml.diagram.preferences.DiagramPrintingPreferencePage">
+      </page>
+      <page
+            id="mdse.book.swml.diagram.rulersAndGrid"
+            name="%prefpage.mdse.book.swml.diagram.rulersAndGrid"
+            category="mdse.book.swml.diagram.general"
+            class="swml.diagram.preferences.DiagramRulersAndGridPreferencePage">
+      </page>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
+      <?gmfgen generated="true"?>
+      <propertyContributor
+            contributorId="mdse.book.swml.diagram"
+            labelProvider="swml.diagram.sheet.SwmlSheetLabelProvider">
+         <propertyCategory category="domain"/>
+         <propertyCategory category="visual"/>
+         <propertyCategory category="extra"/>
+      </propertyContributor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
+      <?gmfgen generated="true"?>   
+      <propertyTabs contributorId="mdse.book.swml.diagram">
+         <propertyTab
+             category="visual"
+             id="property.tab.AppearancePropertySection"
+             label="%tab.appearance"/>
+          <propertyTab
+             category="visual"
+             id="property.tab.DiagramPropertySection"
+             label="%tab.diagram"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.domain"
+             label="%tab.domain"/>
+      </propertyTabs>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
+      <?gmfgen generated="true"?>   
+      <propertySections contributorId="mdse.book.swml.diagram">
+         <propertySection id="property.section.ConnectorAppearancePropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>
+         <propertySection id="property.section.ShapeColorAndFontPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ShapeEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ShapeColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection> 
+         <propertySection id="property.section.DiagramColorsAndFontsPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.DiagramColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>     
+         <propertySection id="property.section.RulerGridPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.grid.RulerGridPropertySection" 
+            tab="property.tab.DiagramPropertySection">
+         </propertySection>     
+         <propertySection
+            id="property.section.domain" 
+            tab="property.tab.domain"
+            class="swml.diagram.sheet.SwmlPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="swml.diagram.navigator.SwmlAbstractNavigatorItem"/>
+         </propertySection>
+      </propertySections>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
+      <?gmfgen generated="true"?>
+      <viewProvider class="swml.diagram.providers.SwmlViewProvider">
+         <Priority name="Lowest"/>
+         <object id="referencing-diagrams" class="org.eclipse.gmf.runtime.notation.Diagram">
+            <method name="getType()" value="swml"/>
+         </object>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Swml"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,3001,3002,3003,3004"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002"/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
+      <?gmfgen generated="true"?>
+      <editpartProvider class="swml.diagram.providers.SwmlEditPartProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
+            <method name="getType()" value="Swml"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
+            <method name="getType()" value="2001,2002,3001,3002,3003,3004"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
+            <method name="getType()" value="4001,4002"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
+            <method name="getType()" value="5004,5006,5001,5002,5003,5005"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
+            <method name="getType()" value="7001,7002"/>
+         </object>
+         <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
+      </editpartProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
+      <?gmfgen generated="true"?>
+      <modelingAssistantProvider class="swml.diagram.providers.SwmlModelingAssistantProvider">
+         <Priority name="Lowest"/>
+         <object class="swml.diagram.edit.parts.WebModelEditPart" id="WebModel_1000"/>
+         <object class="swml.diagram.edit.parts.HypertextLayerEditPart" id="HypertextLayer_2001"/>
+         <object class="swml.diagram.edit.parts.ContentLayerEditPart" id="ContentLayer_2002"/>
+         <object class="swml.diagram.edit.parts.IndexPageEditPart" id="IndexPage_3001"/>
+         <object class="swml.diagram.edit.parts.DetailsPageEditPart" id="DetailsPage_3002"/>
+         <object class="swml.diagram.edit.parts.StaticPageEditPart" id="StaticPage_3003"/>
+         <object class="swml.diagram.edit.parts.ClassEditPart" id="Class_3004"/>
+         <context elements="WebModel_1000,HypertextLayer_2001,ContentLayer_2002,IndexPage_3001,DetailsPage_3002,StaticPage_3003,Class_3004"/>
+      </modelingAssistantProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
+      <?gmfgen generated="true"?>
+      <IconProvider class="swml.diagram.providers.SwmlIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
+      <?gmfgen generated="true"?>
+      <ParserProvider class="swml.diagram.providers.SwmlParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders" id="decorator-provider">
+      <?gmfgen generated="true"?>
+      <decoratorProvider class="swml.diagram.providers.SwmlShortcutsDecoratorProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Node(org.eclipse.gmf.runtime.notation)" id="generated-top-nodes">
+            <method name="getType()" value="2001,2002"/>
+         </object>
+         <context decoratorTargets="generated-top-nodes"/>
+      </decoratorProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
+      <?gmfgen generated="true"?>
+      <metamodel nsURI="http://www.mdse-book.org/swml/">
+         <metamodelType
+               id="mdse.book.swml.diagram.WebModel_1000"
+               name="%metatype.name.WebModel_1000"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="WebModel"
+               edithelper="swml.diagram.edit.helpers.WebModelEditHelper">
+            <param name="semanticHint" value="1000"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.mdse-book.org/swml/">
+         <metamodelType
+               id="mdse.book.swml.diagram.HypertextLayer_2001"
+               name="%metatype.name.HypertextLayer_2001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="HypertextLayer"
+               edithelper="swml.diagram.edit.helpers.HypertextLayerEditHelper">
+            <param name="semanticHint" value="2001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.mdse-book.org/swml/">
+         <metamodelType
+               id="mdse.book.swml.diagram.ContentLayer_2002"
+               name="%metatype.name.ContentLayer_2002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ContentLayer"
+               edithelper="swml.diagram.edit.helpers.ContentLayerEditHelper">
+            <param name="semanticHint" value="2002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.mdse-book.org/swml/">
+         <metamodelType
+               id="mdse.book.swml.diagram.IndexPage_3001"
+               name="%metatype.name.IndexPage_3001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="IndexPage"
+               edithelper="swml.diagram.edit.helpers.IndexPageEditHelper">
+            <param name="semanticHint" value="3001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.mdse-book.org/swml/">
+         <metamodelType
+               id="mdse.book.swml.diagram.DetailsPage_3002"
+               name="%metatype.name.DetailsPage_3002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="DetailsPage"
+               edithelper="swml.diagram.edit.helpers.DetailsPageEditHelper">
+            <param name="semanticHint" value="3002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.mdse-book.org/swml/">
+         <metamodelType
+               id="mdse.book.swml.diagram.StaticPage_3003"
+               name="%metatype.name.StaticPage_3003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="StaticPage"
+               edithelper="swml.diagram.edit.helpers.StaticPageEditHelper">
+            <param name="semanticHint" value="3003"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.mdse-book.org/swml/">
+         <metamodelType
+               id="mdse.book.swml.diagram.Class_3004"
+               name="%metatype.name.Class_3004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Class"
+               edithelper="swml.diagram.edit.helpers.ClassEditHelper">
+            <param name="semanticHint" value="3004"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.mdse-book.org/swml/">
+         <metamodelType
+               id="mdse.book.swml.diagram.NCLink_4001"
+               name="%metatype.name.NCLink_4001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="NCLink"
+               edithelper="swml.diagram.edit.helpers.NCLinkEditHelper">
+            <param name="semanticHint" value="4001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://www.mdse-book.org/swml/">
+         <metamodelType
+               id="mdse.book.swml.diagram.CLink_4002"
+               name="%metatype.name.CLink_4002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="CLink"
+               edithelper="swml.diagram.edit.helpers.CLinkEditHelper">
+            <param name="semanticHint" value="4002"/>
+         </metamodelType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
+      <?gmfgen generated="true"?>
+      <clientContext id="mdse.book.swml.diagram.TypeContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="mdse.book.swml.diagram.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="mdse.book.swml.diagram.TypeContext">
+         <elementType ref="mdse.book.swml.diagram.WebModel_1000"/>
+         <elementType ref="mdse.book.swml.diagram.HypertextLayer_2001"/>
+         <elementType ref="mdse.book.swml.diagram.ContentLayer_2002"/>
+         <elementType ref="mdse.book.swml.diagram.IndexPage_3001"/>
+         <elementType ref="mdse.book.swml.diagram.DetailsPage_3002"/>
+         <elementType ref="mdse.book.swml.diagram.StaticPage_3003"/>
+         <elementType ref="mdse.book.swml.diagram.Class_3004"/>
+         <elementType ref="mdse.book.swml.diagram.NCLink_4001"/>
+         <elementType ref="mdse.book.swml.diagram.CLink_4002"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+      </binding>
+   </extension>
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isURIEditorInput">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="mdse.book.swml.diagram.URIEditorInputPropertyTester"
+           type="org.eclipse.emf.common.ui.URIEditorInput"
+           namespace="mdse.book.swml.diagram"
+           properties="isURIEditorInput"
+           class="swml.diagram.part.SwmlUriEditorInputTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isShortcut">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="mdse.book.swml.diagram.ShortcutPropertyTester"
+           type="org.eclipse.gmf.runtime.notation.View"
+           namespace="mdse.book.swml.diagram"
+           properties="isShortcut"
+           class="swml.diagram.part.SwmlShortcutPropertyTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.ui.navigator.viewer" id="navigator-viewbinding">
+      <?gmfgen generated="true"?>
+      <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension pattern="mdse.book.swml.diagram.resourceContent"/>
+			<contentExtension pattern="mdse.book.swml.diagram.domainResourceContent"/>
+            <contentExtension pattern="mdse.book.swml.diagram.navigatorLinkHelper"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <actionExtension pattern="mdse.book.swml.diagram.navigatorActionProvider"/>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+
+   <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
+      <?gmfgen generated="true"?>
+      <navigatorContent
+            id="mdse.book.swml.diagram.resourceContent" 
+            name="%navigatorContentName" 
+            priority="normal" 
+            contentProvider="swml.diagram.navigator.SwmlNavigatorContentProvider" 
+            labelProvider="swml.diagram.navigator.SwmlNavigatorLabelProvider"
+            icon="icons/obj16/SwmlDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="swml_diagram"/>
+               </and>
+               <instanceof value="swml.diagram.navigator.SwmlAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="mdse.book.swml.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+         	   <instanceof value="swml.diagram.navigator.SwmlAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="mdse.book.swml.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </possibleChildren>
+         <commonSorter 
+               id="mdse.book.swml.diagram.navigatorSorter" 
+               class="swml.diagram.navigator.SwmlNavigatorSorter">
+            <parentExpression>
+               <or>
+	              <and>
+    	             <instanceof value="org.eclipse.core.resources.IFile"/>
+        	         <test property="org.eclipse.core.resources.extension" value="swml_diagram"/>
+                  </and>
+                  <instanceof value="swml.diagram.navigator.SwmlAbstractNavigatorItem"/>
+               </or>
+            </parentExpression>
+         </commonSorter>
+      </navigatorContent>
+      <navigatorContent
+            id="mdse.book.swml.diagram.domainResourceContent" 
+            name="%domainNavigatorContentName" 
+            priority="normal" 
+            contentProvider="swml.diagram.navigator.SwmlDomainNavigatorContentProvider" 
+            labelProvider="swml.diagram.navigator.SwmlDomainNavigatorLabelProvider"
+            icon="icons/obj16/SwmlDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="swml"/>
+               </and>
+               <instanceof value="swml.diagram.navigator.SwmlDomainNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <instanceof value="swml.diagram.navigator.SwmlDomainNavigatorItem"/>
+         </possibleChildren>
+      </navigatorContent>
+      <actionProvider
+            id="mdse.book.swml.diagram.navigatorActionProvider"
+            class="swml.diagram.navigator.SwmlNavigatorActionProvider">
+         <enablement>
+            <or>
+               <instanceof value="swml.diagram.navigator.SwmlAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="mdse.book.swml.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </enablement>
+      </actionProvider>
+   </extension>
+   
+	   <extension point="org.eclipse.ui.navigator.linkHelper" id="navigator-linkhelper">
+      <?gmfgen generated="true"?>
+      <linkHelper
+            id="mdse.book.swml.diagram.navigatorLinkHelper"
+            class="swml.diagram.navigator.SwmlNavigatorLinkHelper">
+         <editorInputEnablement>
+            <and>
+               <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
+               <test property="mdse.book.swml.diagram.isURIEditorInput"/>
+            </and>
+         </editorInputEnablement>
+         <selectionEnablement>
+            <instanceof value="swml.diagram.navigator.SwmlAbstractNavigatorItem"/>
+         </selectionEnablement>
+      </linkHelper>
+   </extension>
+   <extension point="org.eclipse.ui.commands" id="update-cmd">
+      <?gmfgen generated="true"?>
+      <command
+         categoryId="org.eclipse.ui.category.edit"
+         defaultHandler="swml.diagram.part.SwmlDiagramUpdateCommand"
+         description="%update.diagram.description"
+         id="swml.diagram.updateDiagram"
+         name="%update.diagram.name"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
+      <?gmfgen generated="true"?>
+      <key 
+         commandId="swml.diagram.updateDiagram"
+         contextId="swml.diagram.ui.diagramContext"
+         schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+         sequence="F5"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.menus" id="context-menus">
+      <?gmfgen generated="true"?>
+      <!-- menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=">
+      </menuContribution>
+      <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
+      </menuContribution -->
+      <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="mdse.book.swml.diagram.LoadResourceAction">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="swml.diagram.part.SwmlDiagramEditorID"/></with>
+                  <with variable="selection"><iterate ifEmpty="false"> 
+                     <instanceof value="swml.diagram.edit.parts.WebModelEditPart"/>
+                  </iterate></with>
+               </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands" id="menu-commands">
+      <?gmfgen generated="true"?>
+      <category id="swml.diagram.part.SwmlDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <command id="mdse.book.swml.diagram.LoadResourceAction"
+         name="Load Resource"
+         categoryId="swml.diagram.part.SwmlDiagramEditorID"
+         defaultHandler="swml.diagram.part.LoadResourceAction"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.handlers" id="menu-handlers">
+      <?gmfgen generated="true"?>
+   </extension>
+
+   <!-- optionally, specify keybindings -->
+</plugin>

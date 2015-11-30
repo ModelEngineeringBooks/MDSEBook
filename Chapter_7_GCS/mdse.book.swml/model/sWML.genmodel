@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/mdse.book.swml/src"
+    modelPluginID="mdse.book.swml" modelName="Swml" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>sWML.ecore</foreignModel>
+  <genPackages prefix="Swml" disposableProviderFactory="true" ecorePackage="sWML.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="sWML.ecore#//SWMLTypes">
+      <genEnumLiterals ecoreEnumLiteral="sWML.ecore#//SWMLTypes/Boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="sWML.ecore#//SWMLTypes/String"/>
+      <genEnumLiterals ecoreEnumLiteral="sWML.ecore#//SWMLTypes/Integer"/>
+      <genEnumLiterals ecoreEnumLiteral="sWML.ecore#//SWMLTypes/Float"/>
+      <genEnumLiterals ecoreEnumLiteral="sWML.ecore#//SWMLTypes/Email"/>
+    </genEnums>
+    <genClasses ecoreClass="sWML.ecore#//WebModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWML.ecore#//WebModel/hypertext"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWML.ecore#//WebModel/content"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWML.ecore#//WebModel/name"/>
+    </genClasses>
+    <genClasses ecoreClass="sWML.ecore#//HypertextLayer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWML.ecore#//HypertextLayer/pages"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWML.ecore#//HypertextLayer/homePage"/>
+    </genClasses>
+    <genClasses ecoreClass="sWML.ecore#//ContentLayer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWML.ecore#//ContentLayer/classes"/>
+    </genClasses>
+    <genClasses ecoreClass="sWML.ecore#//Class">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWML.ecore#//Class/attributes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWML.ecore#//Class/representativeAttribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWML.ecore#//Class/name"/>
+    </genClasses>
+    <genClasses ecoreClass="sWML.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWML.ecore#//Attribute/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWML.ecore#//Attribute/type"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="sWML.ecore#//Page">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWML.ecore#//Page/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sWML.ecore#//Page/links"/>
+    </genClasses>
+    <genClasses ecoreClass="sWML.ecore#//IndexPage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sWML.ecore#//IndexPage/size"/>
+    </genClasses>
+    <genClasses ecoreClass="sWML.ecore#//DetailsPage"/>
+    <genClasses image="false" ecoreClass="sWML.ecore#//DynamicPage">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWML.ecore#//DynamicPage/displayedClass"/>
+    </genClasses>
+    <genClasses ecoreClass="sWML.ecore#//StaticPage"/>
+    <genClasses image="false" ecoreClass="sWML.ecore#//Link">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sWML.ecore#//Link/target"/>
+    </genClasses>
+    <genClasses ecoreClass="sWML.ecore#//NCLink"/>
+    <genClasses ecoreClass="sWML.ecore#//CLink"/>
+  </genPackages>
+</genmodel:GenModel>

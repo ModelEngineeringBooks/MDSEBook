@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ASCII"?>
+<swml:WebModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:swml="http://www.mdse-book.org/swml/"
+    xsi:schemaLocation="http://www.mdse-book.org/swml/ sWML.ecore">
+  <hypertext
+      homePage="//@hypertext/@pages.0">
+    <pages xsi:type="swml:StaticPage"
+        name="X"/>
+  </hypertext>
+  <content>
+    <classes
+        name="test"/>
+  </content>
+</swml:WebModel>

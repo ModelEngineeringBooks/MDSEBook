@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<smvcml:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:smvcml="http://www.mdse-book.org/smvcml">
+  <elements xsi:type="smvcml:Class" name="Tutorial"/>
+  <elements xsi:type="smvcml:DAO" class="//@elements.0" name="TutorialDAO"/>
+  <elements xsi:type="smvcml:Controller" dao="//@elements.1"/>
+  <elements xsi:type="smvcml:View" ctrl="//@elements.2" title="Show all Tutorial entries"/>
+</smvcml:Model>

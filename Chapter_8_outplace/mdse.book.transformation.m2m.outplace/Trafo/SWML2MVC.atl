@@ -1,0 +1,46 @@
+-- @path MM=/mdse.book.transformation.m2m/MM/sWML.ecore
+-- @path MM1=/mdse.book.transformation.m2m/MM/smvcml.ecore
+
+module SWML2MVC;
+create OUT : MVC from IN : sWML;
+
+rule Model2Model{
+	from 
+	 m1 : sWML!WebModel
+	to m2 : MVC!Model(
+		elements <- m1.content.classes.union(m1.content.classes->collect(c|thisModule.resolveTemp(c, 'd'))),
+		elements <- m1.hypertext.pages->select(p|p.oclIsTypeOf(sWML!IndexPage)).union(m1.hypertext.pages->collect(c|thisModule.resolveTemp(c, 'v')))
+	)
+}
+
+-- implementation of requirement 1
+rule Class2Class_DAO {
+	from
+		c1 : sWML!Class
+	to
+		c2 : MVC!Class (
+			name <- c1.name
+		),
+		d : MVC!DAO(
+			name <- c1.name + 'DAO',
+			class <- c2
+		)
+}
+
+helper context sWML!IndexPage def : getTitle : String = 
+	'Show all ' + self.displayedClass.name + ' entries';
+
+-- implementation of requirement 2
+rule IndexPage2Controller_View {
+	from
+		p : sWML!IndexPage
+	to
+		c : MVC!Controller (
+			op <- #retrieveAll,
+			dao <- thisModule.resolveTemp(p.displayedClass, 'd')
+		),
+		v : MVC!View(
+			title <- p.getTitle,
+			ctrl <- c
+		)
+}

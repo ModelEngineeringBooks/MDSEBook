@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<swml:WebModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:swml="http://www.mdse-book.org/swml/" name="ConferenceManagementSystem">
+  <hypertext homePage="//@hypertext/@pages.0">
+    <pages xsi:type="swml:StaticPage" name="HomePage">
+      <links xsi:type="swml:NCLink" target="//@hypertext/@pages.1"/>
+    </pages>
+    <pages xsi:type="swml:IndexPage" name="TutorialList" displayedClass="//@content/@classes.0" size="10">
+      <links xsi:type="swml:CLink" target="//@hypertext/@pages.2"/>
+    </pages>
+    <pages xsi:type="swml:DetailsPage" name="TutorialDetails" displayedClass="//@content/@classes.0"/>
+  </hypertext>
+  <content>
+    <classes representativeAttribute="//@content/@classes.0/@attributes.0" name="Tutorial">
+      <attributes name="title" type="String"/>
+      <attributes name="presenter" type="String"/>
+    </classes>
+  </content>
+</swml:WebModel>
