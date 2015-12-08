@@ -1,0 +1,38 @@
+grammar mdse.book.SWML with org.eclipse.xtext.common.Terminals
+
+generate sWML "http://www.mdse-book.org/SWML"
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+WebModel :
+  'webapp' name=ID '{'
+    hypertext=HypertextLayer
+    content=ContentLayer
+  '}' ;
+
+HypertextLayer :
+  'hypertext {'
+     pages+=IndexPage+
+  '}' ;
+
+IndexPage :
+  'index' name=ID 'shows'displayedClass=[Class] '[' size=resultsPerPage ']' '{'  '}' ;
+
+terminal resultsPerPage returns ecore::EInt : ('10' | '20' | '30') ;
+
+ContentLayer :
+  'content {'
+    classes+=Class+
+  '}' ;
+
+Class :
+  'class' name=ID '{' attributes+=Attribute+ '}' ;
+  
+ Attribute : 
+  'att' name=ID ':' type=SWMLTypes ';'  ;
+  
+enum SWMLTypes :
+  String | Integer | Float | Email | Boolean
+;
+  
+  

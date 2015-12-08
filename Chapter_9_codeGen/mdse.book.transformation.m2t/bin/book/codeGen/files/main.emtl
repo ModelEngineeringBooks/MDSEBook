@@ -1,17 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
   <mtl:Module name="main" nsURI="book::codeGen::files::main" startHeaderPosition="29" endHeaderPosition="76">
-    <input/>
+    <input>
+      <takesTypesFrom href="http://www.mdse-book.org/smvcml#/"/>
+    </input>
     <imports href="generateJavaClass.emtl#/0"/>
     <ownedModuleElement xsi:type="mtl:Template" name="mainClass" visibility="Public" main="true">
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#xA;"/>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;"/>
-      <body xsi:type="mtl:TemplateExpression"/>
+      <body xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/6/Sequence(String)">
+        <source xsi:type="ocl.ecore:OperationCallExp" eType="/6/OrderedSet(Class)" referredOperation="/1/oclstdlib_Collection(T)_Class/filter">
+          <source xsi:type="ocl.ecore:PropertyCallExp" eType="/6/OrderedSet(Element)">
+            <source xsi:type="ocl.ecore:VariableExp" name="aModel" referredVariable="/0/mainClass/aModel">
+              <eType xsi:type="ecore:EClass" href="http://www.mdse-book.org/smvcml#//Model"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.mdse-book.org/smvcml#//Model/elements"/>
+          </source>
+          <argument xsi:type="ocl.ecore:TypeExp" eType="/7/Class">
+            <referredType xsi:type="ecore:EClass" href="http://www.mdse-book.org/smvcml#//Class"/>
+          </argument>
+        </source>
+        <body xsi:type="mtl:TemplateInvocation">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <definition href="generateJavaClass.emtl#/0/javaClass"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="temp1" referredVariable="/0/mainClass/collect/temp1">
+            <eType xsi:type="ecore:EClass" href="http://www.mdse-book.org/smvcml#//Class"/>
+          </argument>
+        </body>
+        <iterator xsi:type="ocl.ecore:Variable" name="temp1">
+          <eType xsi:type="ecore:EClass" href="http://www.mdse-book.org/smvcml#//Class"/>
+        </iterator>
+      </body>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;"/>
       <parameter name="aModel">
-        <eAnnotations source="MTL">
-          <details key="type" value="Model"/>
-        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.mdse-book.org/smvcml#//Model"/>
       </parameter>
     </ownedModuleElement>
   </mtl:Module>
@@ -42,7 +64,19 @@
         <eAnnotations source="MTL" references="/0/mainClass"/>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aModel">
-          <eType xsi:type="ocl.ecore:VoidType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclVoid"/>
+          <eType xsi:type="ecore:EClass" href="http://www.mdse-book.org/smvcml#//Model"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="javaClass">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="generateJavaClass.emtl#/0/javaClass"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aClass">
+          <eType xsi:type="ecore:EClass" href="http://www.mdse-book.org/smvcml#//Class"/>
         </eParameters>
       </eOperations>
     </eClassifiers>
@@ -55,6 +89,13 @@
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
         <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
       </eAnnotations>
+      <eOperations name="filter">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:CollectionType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+        <eParameters name="filter">
+          <eType xsi:type="ocl.ecore:TypeType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclType"/>
+        </eParameters>
+      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
@@ -66,23 +107,57 @@
         <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
       </eAnnotations>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="smvcml_Model_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.mdse-book.org/smvcml#//Model"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="smvcml_Attribute_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.mdse-book.org/smvcml#//Attribute"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="smvcml_Class_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.mdse-book.org/smvcml#//Class"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="smvcml_Operation_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.mdse-book.org/smvcml#//Operation"/>
+      </eAnnotations>
+    </eClassifiers>
   </ecore:EPackage>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.mdse-book.org/smvcml#//Model"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    <eType xsi:type="ecore:EClass" href="http://www.mdse-book.org/smvcml#//Model"/>
   </ocl.ecore:Variable>
   <ecore:EPackage name="collections">
-    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(OclInvalid)" instanceClassName="java.util.Set">
-      <elementType xsi:type="ocl.ecore:InvalidType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclInvalid"/>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Element)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.mdse-book.org/smvcml#//Element"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Class)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.mdse-book.org/smvcml#//Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(String)" instanceClassName="java.util.List">
+      <elementType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ecore:EPackage name="types">
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="Class">
+      <referredType xsi:type="ecore:EClass" href="http://www.mdse-book.org/smvcml#//Class"/>
     </eClassifiers>
   </ecore:EPackage>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    <eType xsi:type="ecore:EClass" href="http://www.mdse-book.org/smvcml#//Model"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
@@ -103,17 +178,52 @@
       <details key="end" value="198"/>
       <details key="line" value="10"/>
     </eAnnotations>
-    <eAnnotations source="positions.3" references="/0/mainClass/%.2">
+    <eAnnotations source="positions.3" references="/0/mainClass/collect">
+      <details key="start" value="199"/>
+      <details key="end" value="241"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/mainClass/collect/%">
+      <details key="start" value="199"/>
+      <details key="end" value="229"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/mainClass/collect/%/%">
+      <details key="start" value="199"/>
+      <details key="end" value="214"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/mainClass/collect/%/%/aModel">
+      <details key="start" value="199"/>
+      <details key="end" value="205"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/mainClass/collect/%/%.1">
+      <details key="start" value="223"/>
+      <details key="end" value="228"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/mainClass/collect/%.1">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.4" references="/0/mainClass/%.3">
+    <eAnnotations source="positions.9" references="/0/mainClass/collect/%.1/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/mainClass/collect/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/mainClass/%.2">
       <details key="start" value="243"/>
       <details key="end" value="245"/>
       <details key="line" value="11"/>
     </eAnnotations>
-    <eAnnotations source="positions.5" references="/0/mainClass/aModel">
+    <eAnnotations source="positions.12" references="/0/mainClass/aModel">
       <details key="start" value="159"/>
       <details key="end" value="173"/>
       <details key="line" value="7"/>
