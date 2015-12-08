@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<smvcml:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:smvcml="http://www.mdse-book.org/smvcml" classes="//@elements.0">
+<smvcml:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:smvcml="http://www.mdse-book.org/smvcml">
   <elements xsi:type="smvcml:Class" name="Tutorial">
     <atts name="title" type="String"/>
     <atts name="presenter" type="String"/>

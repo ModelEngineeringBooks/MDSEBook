@@ -7,6 +7,6 @@
 [template public mainClass(aModel : Model)]
 	
 	[comment @main /]
-	[aModel.classes.javaClass()/]
+	[aModel.elements->filter(Class).javaClass()/]
 	
 [/template]

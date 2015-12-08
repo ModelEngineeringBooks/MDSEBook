@@ -6,7 +6,6 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: book.codeGen.Activator
 Bundle-Vendor: Eclipse Modeling Project
 Require-Bundle: org.eclipse.core.runtime,
- mdse.book.smvcml,
  org.eclipse.emf.ecore,
  org.eclipse.emf.ecore.xmi,
  org.eclipse.ocl,
@@ -15,9 +14,12 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.acceleo.parser;bundle-version="3.2.0";resolution:=optional,
  org.eclipse.acceleo.model;bundle-version="3.2.0",
  org.eclipse.acceleo.profiler;bundle-version="3.2.0",
- org.eclipse.acceleo.engine;bundle-version="3.2.0"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+ org.eclipse.acceleo.engine;bundle-version="3.2.0",
+ mdse.book.smvcml;bundle-version="0.1.0",
+ com.google.guava;bundle-version="15.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Eclipse-LazyStart: true
-Export-Package: book.codeGen.files
+Export-Package: book.codeGen,
+ book.codeGen.files
 

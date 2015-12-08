@@ -4,7 +4,7 @@
 <stringAttribute key="org.eclipse.acceleo.ide.ui.ARGUMENTS" value=""/>
 <booleanAttribute key="org.eclipse.acceleo.ide.ui.COMPUTE_PROFILING" value="false"/>
 <booleanAttribute key="org.eclipse.acceleo.ide.ui.COMPUTE_TRACEABILITY" value="false"/>
-<stringAttribute key="org.eclipse.acceleo.ide.ui.LAUNCHING_STRATEGY_DESCRIPTION" value="Acceleo Plug-in Application (Default)"/>
+<stringAttribute key="org.eclipse.acceleo.ide.ui.LAUNCHING_STRATEGY_DESCRIPTION" value="Java Application"/>
 <stringAttribute key="org.eclipse.acceleo.ide.ui.MODEL_PATH" value="/mdse.book.transformation.m2t/input/sMVC_Model.xmi"/>
 <stringAttribute key="org.eclipse.acceleo.ide.ui.TARGET_PATH" value="/mdse.book.transformation.m2t/output"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
@@ -14,6 +14,6 @@
 <listEntry value="1"/>
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="book.codeGen.files.Main"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="&quot;C:/Users/Wimmer/workspace_profiles/mdse.book.transformation.m2t/input/sMVC_Model.xmi&quot; &quot;C:/Users/Wimmer/workspace_profiles/mdse.book.transformation.m2t/output&quot;"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="&quot;D:/books/MDSEBook/Chapter_9_codeGen/mdse.book.transformation.m2t/input/sMVC_Model.xmi&quot; &quot;D:/books/MDSEBook/Chapter_9_codeGen/mdse.book.transformation.m2t/output&quot;"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="mdse.book.transformation.m2t"/>
 </launchConfiguration>
