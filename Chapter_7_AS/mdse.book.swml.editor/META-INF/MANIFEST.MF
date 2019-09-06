@@ -2,6 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: mdse.book.swml.editor;singleton:=true
+Automatic-Module-Name: mdse.book.swml.editor
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: swml.presentation.SwmlEditorPlugin$Implementation

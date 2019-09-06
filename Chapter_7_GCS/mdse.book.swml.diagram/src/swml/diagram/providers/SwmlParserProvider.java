@@ -18,70 +18,64 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import swml.SwmlPackage;
 import swml.diagram.edit.parts.ClassNameEditPart;
+import swml.diagram.edit.parts.ContentLayerNameEditPart;
 import swml.diagram.edit.parts.DetailsPageNameEditPart;
+import swml.diagram.edit.parts.HypertextLayerNameEditPart;
 import swml.diagram.edit.parts.IndexPageNameEditPart;
 import swml.diagram.edit.parts.StaticPageNameEditPart;
-import swml.diagram.edit.parts.WrappingLabel2EditPart;
-import swml.diagram.edit.parts.WrappingLabelEditPart;
 import swml.diagram.parsers.MessageFormatParser;
 import swml.diagram.part.SwmlVisualIDRegistry;
 
 /**
  * @generated
  */
-public class SwmlParserProvider extends AbstractProvider implements
-		IParserProvider {
+public class SwmlParserProvider extends AbstractProvider implements IParserProvider {
 
 	/**
-	 * @generated
-	 */
-	private IParser hypertextLayerLabel_5004Parser;
+	* @generated
+	*/
+	private IParser hypertextLayerName_5004Parser;
 
 	/**
-	 * @generated
-	 */
-	private IParser getHypertextLayerLabel_5004Parser() {
-		if (hypertextLayerLabel_5004Parser == null) {
-			EAttribute[] features = new EAttribute[] {
-
-			};
+	* @generated
+	*/
+	private IParser getHypertextLayerName_5004Parser() {
+		if (hypertextLayerName_5004Parser == null) {
+			EAttribute[] features = new EAttribute[] { SwmlPackage.eINSTANCE.getHypertextLayer_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			hypertextLayerLabel_5004Parser = parser;
+			hypertextLayerName_5004Parser = parser;
 		}
-		return hypertextLayerLabel_5004Parser;
+		return hypertextLayerName_5004Parser;
 	}
 
 	/**
-	 * @generated
-	 */
-	private IParser contentLayerLabel_5006Parser;
+	* @generated
+	*/
+	private IParser contentLayerName_5006Parser;
 
 	/**
-	 * @generated
-	 */
-	private IParser getContentLayerLabel_5006Parser() {
-		if (contentLayerLabel_5006Parser == null) {
-			EAttribute[] features = new EAttribute[] {
-
-			};
+	* @generated
+	*/
+	private IParser getContentLayerName_5006Parser() {
+		if (contentLayerName_5006Parser == null) {
+			EAttribute[] features = new EAttribute[] { SwmlPackage.eINSTANCE.getContentLayer_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			contentLayerLabel_5006Parser = parser;
+			contentLayerName_5006Parser = parser;
 		}
-		return contentLayerLabel_5006Parser;
+		return contentLayerName_5006Parser;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private IParser indexPageName_5001Parser;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private IParser getIndexPageName_5001Parser() {
 		if (indexPageName_5001Parser == null) {
-			EAttribute[] features = new EAttribute[] { SwmlPackage.eINSTANCE
-					.getPage_Name() };
+			EAttribute[] features = new EAttribute[] { SwmlPackage.eINSTANCE.getPage_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
 			indexPageName_5001Parser = parser;
 		}
@@ -89,17 +83,16 @@ public class SwmlParserProvider extends AbstractProvider implements
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private IParser detailsPageName_5002Parser;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private IParser getDetailsPageName_5002Parser() {
 		if (detailsPageName_5002Parser == null) {
-			EAttribute[] features = new EAttribute[] { SwmlPackage.eINSTANCE
-					.getPage_Name() };
+			EAttribute[] features = new EAttribute[] { SwmlPackage.eINSTANCE.getPage_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
 			detailsPageName_5002Parser = parser;
 		}
@@ -107,17 +100,16 @@ public class SwmlParserProvider extends AbstractProvider implements
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private IParser staticPageName_5003Parser;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private IParser getStaticPageName_5003Parser() {
 		if (staticPageName_5003Parser == null) {
-			EAttribute[] features = new EAttribute[] { SwmlPackage.eINSTANCE
-					.getPage_Name() };
+			EAttribute[] features = new EAttribute[] { SwmlPackage.eINSTANCE.getPage_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
 			staticPageName_5003Parser = parser;
 		}
@@ -125,17 +117,16 @@ public class SwmlParserProvider extends AbstractProvider implements
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private IParser className_5005Parser;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private IParser getClassName_5005Parser() {
 		if (className_5005Parser == null) {
-			EAttribute[] features = new EAttribute[] { SwmlPackage.eINSTANCE
-					.getClass_Name() };
+			EAttribute[] features = new EAttribute[] { SwmlPackage.eINSTANCE.getClass_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
 			className_5005Parser = parser;
 		}
@@ -143,14 +134,14 @@ public class SwmlParserProvider extends AbstractProvider implements
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
-		case WrappingLabelEditPart.VISUAL_ID:
-			return getHypertextLayerLabel_5004Parser();
-		case WrappingLabel2EditPart.VISUAL_ID:
-			return getContentLayerLabel_5006Parser();
+		case HypertextLayerNameEditPart.VISUAL_ID:
+			return getHypertextLayerName_5004Parser();
+		case ContentLayerNameEditPart.VISUAL_ID:
+			return getContentLayerName_5006Parser();
 		case IndexPageNameEditPart.VISUAL_ID:
 			return getIndexPageName_5001Parser();
 		case DetailsPageNameEditPart.VISUAL_ID:
@@ -164,18 +155,16 @@ public class SwmlParserProvider extends AbstractProvider implements
 	}
 
 	/**
-	 * Utility method that consults ParserService
-	 * @generated
-	 */
-	public static IParser getParser(IElementType type, EObject object,
-			String parserHint) {
-		return ParserService.getInstance().getParser(
-				new HintAdapter(type, object, parserHint));
+	* Utility method that consults ParserService
+	* @generated
+	*/
+	public static IParser getParser(IElementType type, EObject object, String parserHint) {
+		return ParserService.getInstance().getParser(new HintAdapter(type, object, parserHint));
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public IParser getParser(IAdaptable hint) {
 		String vid = (String) hint.getAdapter(String.class);
 		if (vid != null) {
@@ -189,8 +178,8 @@ public class SwmlParserProvider extends AbstractProvider implements
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public boolean provides(IOperation operation) {
 		if (operation instanceof GetParserOperation) {
 			IAdaptable hint = ((GetParserOperation) operation).getHint();
@@ -203,18 +192,18 @@ public class SwmlParserProvider extends AbstractProvider implements
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private static class HintAdapter extends ParserHintAdapter {
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		private final IElementType elementType;
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		public HintAdapter(IElementType type, EObject object, String parserHint) {
 			super(object, parserHint);
 			assert type != null;
@@ -222,8 +211,8 @@ public class SwmlParserProvider extends AbstractProvider implements
 		}
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		public Object getAdapter(Class adapter) {
 			if (IElementType.class.equals(adapter)) {
 				return elementType;

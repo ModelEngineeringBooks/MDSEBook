@@ -1,6 +1,6 @@
 /*
- * 
- */
+* 
+*/
 package swml.diagram.navigator;
 
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
@@ -18,71 +18,68 @@ import swml.diagram.part.SwmlDiagramEditorPlugin;
 public class SwmlDomainNavigatorLabelProvider implements ICommonLabelProvider {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private AdapterFactoryLabelProvider myAdapterFactoryLabelProvider = new AdapterFactoryLabelProvider(
-			SwmlDiagramEditorPlugin.getInstance()
-					.getItemProvidersAdapterFactory());
+			SwmlDiagramEditorPlugin.getInstance().getItemProvidersAdapterFactory());
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void init(ICommonContentExtensionSite aConfig) {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public Image getImage(Object element) {
 		if (element instanceof SwmlDomainNavigatorItem) {
-			return myAdapterFactoryLabelProvider
-					.getImage(((SwmlDomainNavigatorItem) element).getEObject());
+			return myAdapterFactoryLabelProvider.getImage(((SwmlDomainNavigatorItem) element).getEObject());
 		}
 		return null;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public String getText(Object element) {
 		if (element instanceof SwmlDomainNavigatorItem) {
-			return myAdapterFactoryLabelProvider
-					.getText(((SwmlDomainNavigatorItem) element).getEObject());
+			return myAdapterFactoryLabelProvider.getText(((SwmlDomainNavigatorItem) element).getEObject());
 		}
 		return null;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void addListener(ILabelProviderListener listener) {
 		myAdapterFactoryLabelProvider.addListener(listener);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void dispose() {
 		myAdapterFactoryLabelProvider.dispose();
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public boolean isLabelProperty(Object element, String property) {
 		return myAdapterFactoryLabelProvider.isLabelProperty(element, property);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void removeListener(ILabelProviderListener listener) {
 		myAdapterFactoryLabelProvider.removeListener(listener);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void restoreState(IMemento aMemento) {
 	}
 
@@ -93,8 +90,8 @@ public class SwmlDomainNavigatorLabelProvider implements ICommonLabelProvider {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public String getDescription(Object anElement) {
 		return null;
 	}

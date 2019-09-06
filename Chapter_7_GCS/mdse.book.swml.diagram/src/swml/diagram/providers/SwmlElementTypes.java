@@ -9,14 +9,12 @@ import java.util.Map;
 import java.util.Set;
 
 import org.eclipse.core.runtime.IAdaptable;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.ENamedElement;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.gmf.runtime.emf.type.core.ElementTypeRegistry;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
+import org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypeImages;
+import org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypes;
 import org.eclipse.jface.resource.ImageDescriptor;
-import org.eclipse.jface.resource.ImageRegistry;
 import org.eclipse.swt.graphics.Image;
 
 import swml.SwmlPackage;
@@ -37,169 +35,97 @@ import swml.diagram.part.SwmlDiagramEditorPlugin;
 public class SwmlElementTypes {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private SwmlElementTypes() {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private static Map<IElementType, ENamedElement> elements;
 
 	/**
-	 * @generated
-	 */
-	private static ImageRegistry imageRegistry;
+	* @generated
+	*/
+	private static DiagramElementTypeImages elementTypeImages = new DiagramElementTypeImages(
+			SwmlDiagramEditorPlugin.getInstance().getItemProvidersAdapterFactory());
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private static Set<IElementType> KNOWN_ELEMENT_TYPES;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static final IElementType WebModel_1000 = getElementType("mdse.book.swml.diagram.WebModel_1000"); //$NON-NLS-1$
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static final IElementType HypertextLayer_2001 = getElementType("mdse.book.swml.diagram.HypertextLayer_2001"); //$NON-NLS-1$
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static final IElementType ContentLayer_2002 = getElementType("mdse.book.swml.diagram.ContentLayer_2002"); //$NON-NLS-1$
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static final IElementType IndexPage_3001 = getElementType("mdse.book.swml.diagram.IndexPage_3001"); //$NON-NLS-1$
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static final IElementType DetailsPage_3002 = getElementType("mdse.book.swml.diagram.DetailsPage_3002"); //$NON-NLS-1$
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static final IElementType StaticPage_3003 = getElementType("mdse.book.swml.diagram.StaticPage_3003"); //$NON-NLS-1$
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static final IElementType Class_3004 = getElementType("mdse.book.swml.diagram.Class_3004"); //$NON-NLS-1$
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static final IElementType NCLink_4001 = getElementType("mdse.book.swml.diagram.NCLink_4001"); //$NON-NLS-1$
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static final IElementType CLink_4002 = getElementType("mdse.book.swml.diagram.CLink_4002"); //$NON-NLS-1$
 
 	/**
-	 * @generated
-	 */
-	private static ImageRegistry getImageRegistry() {
-		if (imageRegistry == null) {
-			imageRegistry = new ImageRegistry();
-		}
-		return imageRegistry;
-	}
-
-	/**
-	 * @generated
-	 */
-	private static String getImageRegistryKey(ENamedElement element) {
-		return element.getName();
-	}
-
-	/**
-	 * @generated
-	 */
-	private static ImageDescriptor getProvidedImageDescriptor(
-			ENamedElement element) {
-		if (element instanceof EStructuralFeature) {
-			EStructuralFeature feature = ((EStructuralFeature) element);
-			EClass eContainingClass = feature.getEContainingClass();
-			EClassifier eType = feature.getEType();
-			if (eContainingClass != null && !eContainingClass.isAbstract()) {
-				element = eContainingClass;
-			} else if (eType instanceof EClass
-					&& !((EClass) eType).isAbstract()) {
-				element = eType;
-			}
-		}
-		if (element instanceof EClass) {
-			EClass eClass = (EClass) element;
-			if (!eClass.isAbstract()) {
-				return SwmlDiagramEditorPlugin.getInstance()
-						.getItemImageDescriptor(
-								eClass.getEPackage().getEFactoryInstance()
-										.create(eClass));
-			}
-		}
-		// TODO : support structural features
-		return null;
-	}
-
-	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static ImageDescriptor getImageDescriptor(ENamedElement element) {
-		String key = getImageRegistryKey(element);
-		ImageDescriptor imageDescriptor = getImageRegistry().getDescriptor(key);
-		if (imageDescriptor == null) {
-			imageDescriptor = getProvidedImageDescriptor(element);
-			if (imageDescriptor == null) {
-				imageDescriptor = ImageDescriptor.getMissingImageDescriptor();
-			}
-			getImageRegistry().put(key, imageDescriptor);
-		}
-		return imageDescriptor;
+		return elementTypeImages.getImageDescriptor(element);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static Image getImage(ENamedElement element) {
-		String key = getImageRegistryKey(element);
-		Image image = getImageRegistry().get(key);
-		if (image == null) {
-			ImageDescriptor imageDescriptor = getProvidedImageDescriptor(element);
-			if (imageDescriptor == null) {
-				imageDescriptor = ImageDescriptor.getMissingImageDescriptor();
-			}
-			getImageRegistry().put(key, imageDescriptor);
-			image = getImageRegistry().get(key);
-		}
-		return image;
+		return elementTypeImages.getImage(element);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static ImageDescriptor getImageDescriptor(IAdaptable hint) {
-		ENamedElement element = getElement(hint);
-		if (element == null) {
-			return null;
-		}
-		return getImageDescriptor(element);
+		return getImageDescriptor(getElement(hint));
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static Image getImage(IAdaptable hint) {
-		ENamedElement element = getElement(hint);
-		if (element == null) {
-			return null;
-		}
-		return getImage(element);
+		return getImage(getElement(hint));
 	}
 
 	/**
-	 * Returns 'type' of the ecore object associated with the hint.
-	 * 
-	 * @generated
-	 */
+	* Returns 'type' of the ecore object associated with the hint.
+	* 
+	* @generated
+	*/
 	public static ENamedElement getElement(IAdaptable hint) {
 		Object type = hint.getAdapter(IElementType.class);
 		if (elements == null) {
@@ -207,16 +133,13 @@ public class SwmlElementTypes {
 
 			elements.put(WebModel_1000, SwmlPackage.eINSTANCE.getWebModel());
 
-			elements.put(HypertextLayer_2001,
-					SwmlPackage.eINSTANCE.getHypertextLayer());
+			elements.put(HypertextLayer_2001, SwmlPackage.eINSTANCE.getHypertextLayer());
 
-			elements.put(ContentLayer_2002,
-					SwmlPackage.eINSTANCE.getContentLayer());
+			elements.put(ContentLayer_2002, SwmlPackage.eINSTANCE.getContentLayer());
 
 			elements.put(IndexPage_3001, SwmlPackage.eINSTANCE.getIndexPage());
 
-			elements.put(DetailsPage_3002,
-					SwmlPackage.eINSTANCE.getDetailsPage());
+			elements.put(DetailsPage_3002, SwmlPackage.eINSTANCE.getDetailsPage());
 
 			elements.put(StaticPage_3003, SwmlPackage.eINSTANCE.getStaticPage());
 
@@ -230,15 +153,15 @@ public class SwmlElementTypes {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private static IElementType getElementType(String id) {
 		return ElementTypeRegistry.getInstance().getType(id);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static boolean isKnownElementType(IElementType elementType) {
 		if (KNOWN_ELEMENT_TYPES == null) {
 			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
@@ -256,8 +179,8 @@ public class SwmlElementTypes {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static IElementType getElementType(int visualID) {
 		switch (visualID) {
 		case WebModelEditPart.VISUAL_ID:
@@ -281,5 +204,38 @@ public class SwmlElementTypes {
 		}
 		return null;
 	}
+
+	/**
+	* @generated
+	*/
+	public static final DiagramElementTypes TYPED_INSTANCE = new DiagramElementTypes(elementTypeImages) {
+
+		/**
+		* @generated
+		*/
+		@Override
+
+		public boolean isKnownElementType(IElementType elementType) {
+			return swml.diagram.providers.SwmlElementTypes.isKnownElementType(elementType);
+		}
+
+		/**
+		* @generated
+		*/
+		@Override
+
+		public IElementType getElementTypeForVisualId(int visualID) {
+			return swml.diagram.providers.SwmlElementTypes.getElementType(visualID);
+		}
+
+		/**
+		* @generated
+		*/
+		@Override
+
+		public ENamedElement getDefiningNamedElement(IAdaptable elementTypeAdapter) {
+			return swml.diagram.providers.SwmlElementTypes.getElement(elementTypeAdapter);
+		}
+	};
 
 }

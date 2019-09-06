@@ -15,32 +15,30 @@ import swml.SwmlPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Details Page</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
 public class DetailsPageImpl extends DynamicPageImpl implements DetailsPage
 {
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected DetailsPageImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return SwmlPackage.Literals.DETAILS_PAGE;
-  }
+		return SwmlPackage.Literals.DETAILS_PAGE;
+	}
 
 } //DetailsPageImpl

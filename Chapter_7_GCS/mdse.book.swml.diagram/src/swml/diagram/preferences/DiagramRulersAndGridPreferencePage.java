@@ -13,10 +13,9 @@ import swml.diagram.part.SwmlDiagramEditorPlugin;
 public class DiagramRulersAndGridPreferencePage extends RulerGridPreferencePage {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public DiagramRulersAndGridPreferencePage() {
-		setPreferenceStore(SwmlDiagramEditorPlugin.getInstance()
-				.getPreferenceStore());
+		setPreferenceStore(SwmlDiagramEditorPlugin.getInstance().getPreferenceStore());
 	}
 }

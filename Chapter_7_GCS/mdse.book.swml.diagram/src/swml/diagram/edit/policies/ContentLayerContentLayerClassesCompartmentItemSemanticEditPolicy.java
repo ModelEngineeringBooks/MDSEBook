@@ -1,6 +1,6 @@
 /*
- * 
- */
+* 
+*/
 package swml.diagram.edit.policies;
 
 import org.eclipse.gef.commands.Command;
@@ -12,19 +12,18 @@ import swml.diagram.providers.SwmlElementTypes;
 /**
  * @generated
  */
-public class ContentLayerContentLayerClassesCompartmentItemSemanticEditPolicy
-		extends SwmlBaseItemSemanticEditPolicy {
+public class ContentLayerContentLayerClassesCompartmentItemSemanticEditPolicy extends SwmlBaseItemSemanticEditPolicy {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public ContentLayerContentLayerClassesCompartmentItemSemanticEditPolicy() {
 		super(SwmlElementTypes.ContentLayer_2002);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getCreateCommand(CreateElementRequest req) {
 		if (SwmlElementTypes.Class_3004 == req.getElementType()) {
 			return getGEFWrapper(new ClassCreateCommand(req));

@@ -15,14 +15,12 @@ public class ElementInitializers {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static ElementInitializers getInstance() {
-		ElementInitializers cached = SwmlDiagramEditorPlugin.getInstance()
-				.getElementInitializers();
+		ElementInitializers cached = SwmlDiagramEditorPlugin.getInstance().getElementInitializers();
 		if (cached == null) {
-			SwmlDiagramEditorPlugin.getInstance().setElementInitializers(
-					cached = new ElementInitializers());
+			SwmlDiagramEditorPlugin.getInstance().setElementInitializers(cached = new ElementInitializers());
 		}
 		return cached;
 	}

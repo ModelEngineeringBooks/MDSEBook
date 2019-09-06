@@ -1,6 +1,6 @@
 /*
- * 
- */
+* 
+*/
 package swml.diagram.edit.policies;
 
 import org.eclipse.gef.commands.Command;
@@ -12,19 +12,18 @@ import swml.diagram.providers.SwmlElementTypes;
 /**
  * @generated
  */
-public class NCLinkItemSemanticEditPolicy extends
-		SwmlBaseItemSemanticEditPolicy {
+public class NCLinkItemSemanticEditPolicy extends SwmlBaseItemSemanticEditPolicy {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public NCLinkItemSemanticEditPolicy() {
 		super(SwmlElementTypes.NCLink_4001);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getDestroyElementCommand(DestroyElementRequest req) {
 		return getGEFWrapper(new DestroyElementCommand(req));
 	}

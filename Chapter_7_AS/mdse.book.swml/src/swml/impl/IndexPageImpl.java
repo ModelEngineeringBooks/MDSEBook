@@ -21,160 +21,158 @@ import swml.SwmlPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link swml.impl.IndexPageImpl#getSize <em>Size</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public class IndexPageImpl extends DynamicPageImpl implements IndexPage
 {
   /**
-   * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSize()
-   * @generated
-   * @ordered
-   */
+	 * @see #getSize()
+	 * @generated
+	 * @ordered
+	 */
   protected static final int SIZE_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getSize() <em>Size</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getSize() <em>Size</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSize()
-   * @generated
-   * @ordered
-   */
+	 * @see #getSize()
+	 * @generated
+	 * @ordered
+	 */
   protected int size = SIZE_EDEFAULT;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected IndexPageImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return SwmlPackage.Literals.INDEX_PAGE;
-  }
+		return SwmlPackage.Literals.INDEX_PAGE;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public int getSize()
+	 * @generated
+	 */
+  @Override
+		public int getSize()
   {
-    return size;
-  }
+		return size;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setSize(int newSize)
+	 * @generated
+	 */
+  @Override
+		public void setSize(int newSize)
   {
-    int oldSize = size;
-    size = newSize;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SwmlPackage.INDEX_PAGE__SIZE, oldSize, size));
-  }
+		int oldSize = size;
+		size = newSize;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SwmlPackage.INDEX_PAGE__SIZE, oldSize, size));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case SwmlPackage.INDEX_PAGE__SIZE:
-        return getSize();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case SwmlPackage.INDEX_PAGE__SIZE:
+				return getSize();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case SwmlPackage.INDEX_PAGE__SIZE:
-        setSize((Integer)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case SwmlPackage.INDEX_PAGE__SIZE:
+				setSize((Integer)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case SwmlPackage.INDEX_PAGE__SIZE:
-        setSize(SIZE_EDEFAULT);
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case SwmlPackage.INDEX_PAGE__SIZE:
+				setSize(SIZE_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case SwmlPackage.INDEX_PAGE__SIZE:
-        return size != SIZE_EDEFAULT;
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case SwmlPackage.INDEX_PAGE__SIZE:
+				return size != SIZE_EDEFAULT;
+		}
+		return super.eIsSet(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String toString()
   {
-    if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (size: ");
-    result.append(size);
-    result.append(')');
-    return result.toString();
-  }
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (size: ");
+		result.append(size);
+		result.append(')');
+		return result.toString();
+	}
 
 } //IndexPageImpl

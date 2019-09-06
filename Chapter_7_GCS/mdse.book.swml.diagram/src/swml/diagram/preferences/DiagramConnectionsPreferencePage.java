@@ -13,10 +13,9 @@ import swml.diagram.part.SwmlDiagramEditorPlugin;
 public class DiagramConnectionsPreferencePage extends ConnectionsPreferencePage {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public DiagramConnectionsPreferencePage() {
-		setPreferenceStore(SwmlDiagramEditorPlugin.getInstance()
-				.getPreferenceStore());
+		setPreferenceStore(SwmlDiagramEditorPlugin.getInstance().getPreferenceStore());
 	}
 }

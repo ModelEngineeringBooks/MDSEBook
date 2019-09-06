@@ -1,6 +1,6 @@
 /*
- * 
- */
+* 
+*/
 package swml.diagram.edit.policies;
 
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
@@ -17,19 +17,18 @@ import swml.diagram.providers.SwmlElementTypes;
 /**
  * @generated
  */
-public class WebModelItemSemanticEditPolicy extends
-		SwmlBaseItemSemanticEditPolicy {
+public class WebModelItemSemanticEditPolicy extends SwmlBaseItemSemanticEditPolicy {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public WebModelItemSemanticEditPolicy() {
 		super(SwmlElementTypes.WebModel_1000);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getCreateCommand(CreateElementRequest req) {
 		if (SwmlElementTypes.HypertextLayer_2001 == req.getElementType()) {
 			return getGEFWrapper(new HypertextLayerCreateCommand(req));
@@ -41,29 +40,23 @@ public class WebModelItemSemanticEditPolicy extends
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getDuplicateCommand(DuplicateElementsRequest req) {
-		TransactionalEditingDomain editingDomain = ((IGraphicalEditPart) getHost())
-				.getEditingDomain();
+		TransactionalEditingDomain editingDomain = ((IGraphicalEditPart) getHost()).getEditingDomain();
 		return getGEFWrapper(new DuplicateAnythingCommand(editingDomain, req));
 	}
 
 	/**
-	 * @generated
-	 */
-	private static class DuplicateAnythingCommand extends
-			DuplicateEObjectsCommand {
+	* @generated
+	*/
+	private static class DuplicateAnythingCommand extends DuplicateEObjectsCommand {
 
 		/**
-		 * @generated
-		 */
-		public DuplicateAnythingCommand(
-				TransactionalEditingDomain editingDomain,
-				DuplicateElementsRequest req) {
-			super(editingDomain, req.getLabel(), req
-					.getElementsToBeDuplicated(), req
-					.getAllDuplicatedElementsMap());
+		* @generated
+		*/
+		public DuplicateAnythingCommand(TransactionalEditingDomain editingDomain, DuplicateElementsRequest req) {
+			super(editingDomain, req.getLabel(), req.getElementsToBeDuplicated(), req.getAllDuplicatedElementsMap());
 		}
 
 	}

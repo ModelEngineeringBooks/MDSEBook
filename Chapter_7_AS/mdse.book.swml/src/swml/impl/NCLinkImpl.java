@@ -15,32 +15,30 @@ import swml.SwmlPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>NC Link</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
 public class NCLinkImpl extends LinkImpl implements NCLink
 {
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected NCLinkImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return SwmlPackage.Literals.NC_LINK;
-  }
+		return SwmlPackage.Literals.NC_LINK;
+	}
 
 } //NCLinkImpl

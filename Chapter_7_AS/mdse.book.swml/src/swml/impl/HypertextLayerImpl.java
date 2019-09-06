@@ -32,207 +32,272 @@ import swml.SwmlPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link swml.impl.HypertextLayerImpl#getPages <em>Pages</em>}</li>
  *   <li>{@link swml.impl.HypertextLayerImpl#getHomePage <em>Home Page</em>}</li>
+ *   <li>{@link swml.impl.HypertextLayerImpl#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public class HypertextLayerImpl extends EObjectImpl implements HypertextLayer
 {
   /**
-   * The cached value of the '{@link #getPages() <em>Pages</em>}' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getPages() <em>Pages</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPages()
-   * @generated
-   * @ordered
-   */
+	 * @see #getPages()
+	 * @generated
+	 * @ordered
+	 */
   protected EList<Page> pages;
 
   /**
-   * The cached value of the '{@link #getHomePage() <em>Home Page</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getHomePage() <em>Home Page</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getHomePage()
-   * @generated
-   * @ordered
-   */
+	 * @see #getHomePage()
+	 * @generated
+	 * @ordered
+	 */
   protected Page homePage;
 
   /**
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+		/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected HypertextLayerImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return SwmlPackage.Literals.HYPERTEXT_LAYER;
-  }
+		return SwmlPackage.Literals.HYPERTEXT_LAYER;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<Page> getPages()
+	 * @generated
+	 */
+  @Override
+		public EList<Page> getPages()
   {
-    if (pages == null)
-    {
-      pages = new EObjectContainmentEList<Page>(Page.class, this, SwmlPackage.HYPERTEXT_LAYER__PAGES);
-    }
-    return pages;
-  }
+		if (pages == null) {
+			pages = new EObjectContainmentEList<Page>(Page.class, this, SwmlPackage.HYPERTEXT_LAYER__PAGES);
+		}
+		return pages;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public Page getHomePage()
+	 * @generated
+	 */
+  @Override
+		public Page getHomePage()
   {
-    if (homePage != null && homePage.eIsProxy())
-    {
-      InternalEObject oldHomePage = (InternalEObject)homePage;
-      homePage = (Page)eResolveProxy(oldHomePage);
-      if (homePage != oldHomePage)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SwmlPackage.HYPERTEXT_LAYER__HOME_PAGE, oldHomePage, homePage));
-      }
-    }
-    return homePage;
-  }
+		if (homePage != null && homePage.eIsProxy()) {
+			InternalEObject oldHomePage = (InternalEObject)homePage;
+			homePage = (Page)eResolveProxy(oldHomePage);
+			if (homePage != oldHomePage) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SwmlPackage.HYPERTEXT_LAYER__HOME_PAGE, oldHomePage, homePage));
+			}
+		}
+		return homePage;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Page basicGetHomePage()
   {
-    return homePage;
-  }
+		return homePage;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setHomePage(Page newHomePage)
+	 * @generated
+	 */
+  @Override
+		public void setHomePage(Page newHomePage)
   {
-    Page oldHomePage = homePage;
-    homePage = newHomePage;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SwmlPackage.HYPERTEXT_LAYER__HOME_PAGE, oldHomePage, homePage));
-  }
+		Page oldHomePage = homePage;
+		homePage = newHomePage;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SwmlPackage.HYPERTEXT_LAYER__HOME_PAGE, oldHomePage, homePage));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getName() {
+		return name;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SwmlPackage.HYPERTEXT_LAYER__NAME, oldName, name));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    switch (featureID)
-    {
-      case SwmlPackage.HYPERTEXT_LAYER__PAGES:
-        return ((InternalEList<?>)getPages()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
+		switch (featureID) {
+			case SwmlPackage.HYPERTEXT_LAYER__PAGES:
+				return ((InternalEList<?>)getPages()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case SwmlPackage.HYPERTEXT_LAYER__PAGES:
-        return getPages();
-      case SwmlPackage.HYPERTEXT_LAYER__HOME_PAGE:
-        if (resolve) return getHomePage();
-        return basicGetHomePage();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case SwmlPackage.HYPERTEXT_LAYER__PAGES:
+				return getPages();
+			case SwmlPackage.HYPERTEXT_LAYER__HOME_PAGE:
+				if (resolve) return getHomePage();
+				return basicGetHomePage();
+			case SwmlPackage.HYPERTEXT_LAYER__NAME:
+				return getName();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case SwmlPackage.HYPERTEXT_LAYER__PAGES:
-        getPages().clear();
-        getPages().addAll((Collection<? extends Page>)newValue);
-        return;
-      case SwmlPackage.HYPERTEXT_LAYER__HOME_PAGE:
-        setHomePage((Page)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case SwmlPackage.HYPERTEXT_LAYER__PAGES:
+				getPages().clear();
+				getPages().addAll((Collection<? extends Page>)newValue);
+				return;
+			case SwmlPackage.HYPERTEXT_LAYER__HOME_PAGE:
+				setHomePage((Page)newValue);
+				return;
+			case SwmlPackage.HYPERTEXT_LAYER__NAME:
+				setName((String)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case SwmlPackage.HYPERTEXT_LAYER__PAGES:
-        getPages().clear();
-        return;
-      case SwmlPackage.HYPERTEXT_LAYER__HOME_PAGE:
-        setHomePage((Page)null);
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case SwmlPackage.HYPERTEXT_LAYER__PAGES:
+				getPages().clear();
+				return;
+			case SwmlPackage.HYPERTEXT_LAYER__HOME_PAGE:
+				setHomePage((Page)null);
+				return;
+			case SwmlPackage.HYPERTEXT_LAYER__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case SwmlPackage.HYPERTEXT_LAYER__PAGES:
-        return pages != null && !pages.isEmpty();
-      case SwmlPackage.HYPERTEXT_LAYER__HOME_PAGE:
-        return homePage != null;
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case SwmlPackage.HYPERTEXT_LAYER__PAGES:
+				return pages != null && !pages.isEmpty();
+			case SwmlPackage.HYPERTEXT_LAYER__HOME_PAGE:
+				return homePage != null;
+			case SwmlPackage.HYPERTEXT_LAYER__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		}
+		return super.eIsSet(featureID);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
+	}
 
 } //HypertextLayerImpl

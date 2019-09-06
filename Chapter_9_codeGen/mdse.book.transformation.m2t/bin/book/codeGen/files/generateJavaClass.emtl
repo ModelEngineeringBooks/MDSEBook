@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
-  <mtl:Module name="generateJavaClass" nsURI="book::codeGen::files::generateJavaClass" startHeaderPosition="29" endHeaderPosition="171">
+  <mtl:Module name="generateJavaClass" nsURI="book::codeGen::files::generateJavaClass" startHeaderPosition="30" endHeaderPosition="174">
     <input>
       <takesTypesFrom href="http://www.mdse-book.org/smvcml#/"/>
     </input>
@@ -52,9 +52,9 @@
       <type xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Template" name="javaClass" visibility="Public">
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
       <body xsi:type="mtl:FileBlock" openMode="OverWrite">
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="package webapp.entities;&#xA;&#xA;import java.io.Serializable;&#xA;&#xA;public class "/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="package webapp.entities;&#xD;&#xA;&#xD;&#xA;import java.io.Serializable;&#xD;&#xA;&#xD;&#xA;public class "/>
         <body xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/javaClass/aClass">
@@ -62,7 +62,7 @@
           </source>
           <referredProperty xsi:type="ecore:EAttribute" href="http://www.mdse-book.org/smvcml#//Class/name"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" implements Serializable {&#xA;&#xA;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" implements Serializable {&#xD;&#xA;&#xD;&#xA;"/>
         <body xsi:type="mtl:ForBlock">
           <body xsi:type="mtl:TemplateInvocation" definition="/0/javaAttribute">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
@@ -70,7 +70,7 @@
               <eType xsi:type="ecore:EClass" href="http://www.mdse-book.org/smvcml#//Attribute"/>
             </argument>
           </body>
-          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
           <loopVariable name="att">
             <eType xsi:type="ecore:EClass" href="http://www.mdse-book.org/smvcml#//Attribute"/>
           </loopVariable>
@@ -84,7 +84,7 @@
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </each>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
         <body xsi:type="mtl:ForBlock">
           <body xsi:type="mtl:TemplateInvocation" definition="/0/javaMethod">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
@@ -92,7 +92,7 @@
               <eType xsi:type="ecore:EClass" href="http://www.mdse-book.org/smvcml#//Operation"/>
             </argument>
           </body>
-          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
           <loopVariable name="op">
             <eType xsi:type="ecore:EClass" href="http://www.mdse-book.org/smvcml#//Operation"/>
           </loopVariable>
@@ -106,7 +106,7 @@
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </each>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;}&#xA;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;}&#xD;&#xA;"/>
         <fileUrl xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/+">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/toUpperFirst">
@@ -148,7 +148,7 @@
         </source>
         <referredProperty xsi:type="ecore:EAttribute" href="http://www.mdse-book.org/smvcml#//Attribute/name"/>
       </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=";&#xA;&#xA;&#x9;public "/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=";&#xD;&#xA;&#xD;&#xA;&#x9;public "/>
       <body xsi:type="ocl.ecore:PropertyCallExp">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <source xsi:type="ocl.ecore:VariableExp" name="att" referredVariable="/0/javaAttribute/att">
@@ -163,7 +163,7 @@
           <eType xsi:type="ecore:EClass" href="http://www.mdse-book.org/smvcml#//Attribute"/>
         </argument>
       </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="() {&#xA;&#x9;&#x9;return "/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="() {&#xD;&#xA;&#x9;&#x9;return "/>
       <body xsi:type="ocl.ecore:PropertyCallExp">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <source xsi:type="ocl.ecore:VariableExp" name="att" referredVariable="/0/javaAttribute/att">
@@ -171,7 +171,7 @@
         </source>
         <referredProperty xsi:type="ecore:EAttribute" href="http://www.mdse-book.org/smvcml#//Attribute/name"/>
       </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=";&#xA;&#x9;}&#x9;"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=";&#xD;&#xA;&#x9;}&#x9;"/>
       <parameter name="att">
         <eType xsi:type="ecore:EClass" href="http://www.mdse-book.org/smvcml#//Attribute"/>
       </parameter>
@@ -193,9 +193,9 @@
         </source>
         <referredProperty xsi:type="ecore:EAttribute" href="http://www.mdse-book.org/smvcml#//Operation/name"/>
       </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="() {&#xA;&#x9;&#x9;// "/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="() {&#xD;&#xA;&#x9;&#x9;// "/>
       <body xsi:type="mtl:ProtectedAreaBlock">
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;&#x9;// Fill in the operation implementation here!&#xA;&#x9;&#x9;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#x9;&#x9;// Fill in the operation implementation here!&#xD;&#xA;&#x9;&#x9;"/>
         <body xsi:type="mtl:QueryInvocation" definition="/0/returnStatement">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <argument xsi:type="ocl.ecore:PropertyCallExp">
@@ -206,7 +206,7 @@
             <referredProperty xsi:type="ecore:EAttribute" href="http://www.mdse-book.org/smvcml#//Operation/type"/>
           </argument>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;&#x9;// "/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#x9;&#x9;// "/>
         <marker xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="ocl.ecore:VariableExp" name="op" referredVariable="/0/javaMethod/op">
@@ -215,7 +215,7 @@
           <referredProperty xsi:type="ecore:EAttribute" href="http://www.mdse-book.org/smvcml#//Operation/name"/>
         </marker>
       </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;}"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#x9;}"/>
       <parameter name="op">
         <eType xsi:type="ecore:EClass" href="http://www.mdse-book.org/smvcml#//Operation"/>
       </parameter>
@@ -478,418 +478,418 @@
   </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/getter">
-      <details key="start" value="92"/>
-      <details key="end" value="173"/>
+      <details key="start" value="95"/>
+      <details key="end" value="176"/>
       <details key="line" value="4"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/getter/att">
-      <details key="start" value="113"/>
-      <details key="end" value="128"/>
+      <details key="start" value="116"/>
+      <details key="end" value="131"/>
       <details key="line" value="4"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/getter/%">
-      <details key="start" value="141"/>
-      <details key="end" value="170"/>
+      <details key="start" value="144"/>
+      <details key="end" value="173"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.3" references="/0/getter/%/%">
-      <details key="start" value="141"/>
-      <details key="end" value="146"/>
+      <details key="start" value="144"/>
+      <details key="end" value="149"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.4" references="/0/getter/%/%.1">
-      <details key="start" value="147"/>
-      <details key="end" value="170"/>
+      <details key="start" value="150"/>
+      <details key="end" value="173"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.5" references="/0/getter/%/%.1/%">
-      <details key="start" value="147"/>
-      <details key="end" value="155"/>
+      <details key="start" value="150"/>
+      <details key="end" value="158"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.6" references="/0/getter/%/%.1/%/att">
-      <details key="start" value="147"/>
-      <details key="end" value="150"/>
+      <details key="start" value="150"/>
+      <details key="end" value="153"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.7" references="/0/returnStatement">
-      <details key="start" value="175"/>
-      <details key="end" value="290"/>
+      <details key="start" value="180"/>
+      <details key="end" value="295"/>
       <details key="line" value="6"/>
     </eAnnotations>
     <eAnnotations source="positions.8" references="/0/returnStatement/type">
-      <details key="start" value="205"/>
-      <details key="end" value="217"/>
+      <details key="start" value="210"/>
+      <details key="end" value="222"/>
       <details key="line" value="6"/>
     </eAnnotations>
     <eAnnotations source="positions.9" references="/0/returnStatement/%">
-      <details key="start" value="230"/>
-      <details key="end" value="286"/>
+      <details key="start" value="235"/>
+      <details key="end" value="291"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.10" references="/0/returnStatement/%/%">
-      <details key="start" value="233"/>
-      <details key="end" value="249"/>
+      <details key="start" value="238"/>
+      <details key="end" value="254"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.11" references="/0/returnStatement/%/%/type">
-      <details key="start" value="233"/>
-      <details key="end" value="237"/>
+      <details key="start" value="238"/>
+      <details key="end" value="242"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.12" references="/0/returnStatement/%/%/%">
-      <details key="start" value="240"/>
-      <details key="end" value="249"/>
+      <details key="start" value="245"/>
+      <details key="end" value="254"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.13" references="/0/returnStatement/%/%.1">
-      <details key="start" value="255"/>
-      <details key="end" value="269"/>
+      <details key="start" value="260"/>
+      <details key="end" value="274"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.14" references="/0/returnStatement/%/%.2">
-      <details key="start" value="275"/>
-      <details key="end" value="280"/>
+      <details key="start" value="280"/>
+      <details key="end" value="285"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.15" references="/0/javaClass">
-      <details key="start" value="292"/>
-      <details key="end" value="693"/>
+      <details key="start" value="299"/>
+      <details key="end" value="719"/>
       <details key="line" value="8"/>
     </eAnnotations>
     <eAnnotations source="positions.16" references="/0/javaClass/%">
-      <details key="start" value="336"/>
-      <details key="end" value="337"/>
+      <details key="start" value="344"/>
+      <details key="end" value="346"/>
       <details key="line" value="9"/>
     </eAnnotations>
     <eAnnotations source="positions.17" references="/0/javaClass/%.1">
-      <details key="start" value="337"/>
-      <details key="end" value="681"/>
+      <details key="start" value="346"/>
+      <details key="end" value="706"/>
       <details key="line" value="10"/>
     </eAnnotations>
     <eAnnotations source="positions.18" references="/0/javaClass/%.1/%">
-      <details key="start" value="397"/>
-      <details key="end" value="466"/>
+      <details key="start" value="407"/>
+      <details key="end" value="480"/>
       <details key="line" value="11"/>
     </eAnnotations>
     <eAnnotations source="positions.19" references="/0/javaClass/%.1/%.1">
-      <details key="start" value="467"/>
-      <details key="end" value="478"/>
+      <details key="start" value="481"/>
+      <details key="end" value="492"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.20" references="/0/javaClass/%.1/%.1/aClass">
-      <details key="start" value="467"/>
-      <details key="end" value="473"/>
+      <details key="start" value="481"/>
+      <details key="end" value="487"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.21" references="/0/javaClass/%.1/%.2">
-      <details key="start" value="480"/>
-      <details key="end" value="508"/>
+      <details key="start" value="494"/>
+      <details key="end" value="524"/>
       <details key="line" value="15"/>
     </eAnnotations>
     <eAnnotations source="positions.22" references="/0/javaClass/%.1/%.3">
-      <details key="start" value="508"/>
-      <details key="end" value="591"/>
+      <details key="start" value="524"/>
+      <details key="end" value="609"/>
       <details key="line" value="17"/>
     </eAnnotations>
     <eAnnotations source="positions.23" references="/0/javaClass/%.1/%.3/%">
-      <details key="start" value="564"/>
-      <details key="end" value="582"/>
+      <details key="start" value="581"/>
+      <details key="end" value="599"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.24" references="/0/javaClass/%.1/%.3/%/att">
-      <details key="start" value="578"/>
-      <details key="end" value="581"/>
+      <details key="start" value="595"/>
+      <details key="end" value="598"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.25" references="/0/javaClass/%.1/%.3/%.1">
-      <details key="start" value="584"/>
-      <details key="end" value="585"/>
+      <details key="start" value="601"/>
+      <details key="end" value="603"/>
       <details key="line" value="19"/>
     </eAnnotations>
     <eAnnotations source="positions.26" references="/0/javaClass/%.1/%.3/att">
-      <details key="start" value="514"/>
-      <details key="end" value="529"/>
+      <details key="start" value="530"/>
+      <details key="end" value="545"/>
       <details key="line" value="17"/>
     </eAnnotations>
     <eAnnotations source="positions.27" references="/0/javaClass/%.1/%.3/%.2">
-      <details key="start" value="532"/>
-      <details key="end" value="543"/>
+      <details key="start" value="548"/>
+      <details key="end" value="559"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.28" references="/0/javaClass/%.1/%.3/%.2/aClass">
-      <details key="start" value="532"/>
-      <details key="end" value="538"/>
+      <details key="start" value="548"/>
+      <details key="end" value="554"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.29" references="/0/javaClass/%.1/%.3/%.3">
-      <details key="start" value="556"/>
-      <details key="end" value="560"/>
+      <details key="start" value="572"/>
+      <details key="end" value="576"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.30" references="/0/javaClass/%.1/%.4">
-      <details key="start" value="592"/>
-      <details key="end" value="593"/>
+      <details key="start" value="611"/>
+      <details key="end" value="613"/>
       <details key="line" value="20"/>
     </eAnnotations>
     <eAnnotations source="positions.31" references="/0/javaClass/%.1/%.5">
-      <details key="start" value="593"/>
-      <details key="end" value="670"/>
+      <details key="start" value="613"/>
+      <details key="end" value="692"/>
       <details key="line" value="21"/>
     </eAnnotations>
     <eAnnotations source="positions.32" references="/0/javaClass/%.1/%.5/%">
-      <details key="start" value="647"/>
-      <details key="end" value="661"/>
+      <details key="start" value="668"/>
+      <details key="end" value="682"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.33" references="/0/javaClass/%.1/%.5/%/op">
-      <details key="start" value="658"/>
-      <details key="end" value="660"/>
+      <details key="start" value="679"/>
+      <details key="end" value="681"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.34" references="/0/javaClass/%.1/%.5/%.1">
-      <details key="start" value="663"/>
-      <details key="end" value="664"/>
+      <details key="start" value="684"/>
+      <details key="end" value="686"/>
       <details key="line" value="23"/>
     </eAnnotations>
     <eAnnotations source="positions.35" references="/0/javaClass/%.1/%.5/op">
-      <details key="start" value="599"/>
-      <details key="end" value="613"/>
+      <details key="start" value="619"/>
+      <details key="end" value="633"/>
       <details key="line" value="21"/>
     </eAnnotations>
     <eAnnotations source="positions.36" references="/0/javaClass/%.1/%.5/%.2">
-      <details key="start" value="616"/>
-      <details key="end" value="626"/>
+      <details key="start" value="636"/>
+      <details key="end" value="646"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.37" references="/0/javaClass/%.1/%.5/%.2/aClass">
-      <details key="start" value="616"/>
-      <details key="end" value="622"/>
+      <details key="start" value="636"/>
+      <details key="end" value="642"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.38" references="/0/javaClass/%.1/%.5/%.3">
-      <details key="start" value="639"/>
-      <details key="end" value="643"/>
+      <details key="start" value="659"/>
+      <details key="end" value="663"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.39" references="/0/javaClass/%.1/%.6">
-      <details key="start" value="671"/>
-      <details key="end" value="674"/>
+      <details key="start" value="694"/>
+      <details key="end" value="699"/>
       <details key="line" value="24"/>
     </eAnnotations>
     <eAnnotations source="positions.40" references="/0/javaClass/%.1/%.7">
-      <details key="start" value="344"/>
-      <details key="end" value="378"/>
+      <details key="start" value="353"/>
+      <details key="end" value="387"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.41" references="/0/javaClass/%.1/%.7/%">
-      <details key="start" value="344"/>
-      <details key="end" value="370"/>
+      <details key="start" value="353"/>
+      <details key="end" value="379"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.42" references="/0/javaClass/%.1/%.7/%/%">
-      <details key="start" value="344"/>
-      <details key="end" value="355"/>
+      <details key="start" value="353"/>
+      <details key="end" value="364"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.43" references="/0/javaClass/%.1/%.7/%/%/aClass">
-      <details key="start" value="344"/>
-      <details key="end" value="350"/>
+      <details key="start" value="353"/>
+      <details key="end" value="359"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.44" references="/0/javaClass/%.1/%.7/%.1">
-      <details key="start" value="371"/>
-      <details key="end" value="378"/>
+      <details key="start" value="380"/>
+      <details key="end" value="387"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.45" references="/0/javaClass/%.1/%.8">
-      <details key="start" value="387"/>
-      <details key="end" value="394"/>
+      <details key="start" value="396"/>
+      <details key="end" value="403"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.46" references="/0/javaClass/aClass">
-      <details key="start" value="319"/>
-      <details key="end" value="333"/>
+      <details key="start" value="326"/>
+      <details key="end" value="340"/>
       <details key="line" value="8"/>
     </eAnnotations>
     <eAnnotations source="positions.47" references="/0/javaAttribute">
-      <details key="start" value="695"/>
-      <details key="end" value="856"/>
+      <details key="start" value="723"/>
+      <details key="end" value="890"/>
       <details key="line" value="29"/>
     </eAnnotations>
     <eAnnotations source="positions.48" references="/0/javaAttribute/%">
-      <details key="start" value="744"/>
-      <details key="end" value="753"/>
+      <details key="start" value="773"/>
+      <details key="end" value="782"/>
       <details key="line" value="30"/>
     </eAnnotations>
     <eAnnotations source="positions.49" references="/0/javaAttribute/%.1">
-      <details key="start" value="754"/>
-      <details key="end" value="762"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.50" references="/0/javaAttribute/%.1/att">
-      <details key="start" value="754"/>
-      <details key="end" value="757"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.51" references="/0/javaAttribute/%.2">
-      <details key="start" value="764"/>
-      <details key="end" value="765"/>
-      <details key="line" value="30"/>
-    </eAnnotations>
-    <eAnnotations source="positions.52" references="/0/javaAttribute/%.3">
-      <details key="start" value="766"/>
-      <details key="end" value="774"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.53" references="/0/javaAttribute/%.3/att">
-      <details key="start" value="766"/>
-      <details key="end" value="769"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.54" references="/0/javaAttribute/%.4">
-      <details key="start" value="776"/>
-      <details key="end" value="787"/>
-      <details key="line" value="30"/>
-    </eAnnotations>
-    <eAnnotations source="positions.55" references="/0/javaAttribute/%.5">
-      <details key="start" value="788"/>
-      <details key="end" value="796"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.56" references="/0/javaAttribute/%.5/att">
-      <details key="start" value="788"/>
+      <details key="start" value="783"/>
       <details key="end" value="791"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.57" references="/0/javaAttribute/%.6">
-      <details key="start" value="798"/>
-      <details key="end" value="799"/>
-      <details key="line" value="32"/>
-    </eAnnotations>
-    <eAnnotations source="positions.58" references="/0/javaAttribute/%.7">
-      <details key="start" value="800"/>
-      <details key="end" value="812"/>
+    <eAnnotations source="positions.50" references="/0/javaAttribute/%.1/att">
+      <details key="start" value="783"/>
+      <details key="end" value="786"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.59" references="/0/javaAttribute/%.7/att">
-      <details key="start" value="800"/>
+    <eAnnotations source="positions.51" references="/0/javaAttribute/%.2">
+      <details key="start" value="793"/>
+      <details key="end" value="794"/>
+      <details key="line" value="30"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/javaAttribute/%.3">
+      <details key="start" value="795"/>
       <details key="end" value="803"/>
       <details key="line" value="0"/>
     </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/javaAttribute/%.3/att">
+      <details key="start" value="795"/>
+      <details key="end" value="798"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/javaAttribute/%.4">
+      <details key="start" value="805"/>
+      <details key="end" value="818"/>
+      <details key="line" value="30"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/javaAttribute/%.5">
+      <details key="start" value="819"/>
+      <details key="end" value="827"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/javaAttribute/%.5/att">
+      <details key="start" value="819"/>
+      <details key="end" value="822"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/javaAttribute/%.6">
+      <details key="start" value="829"/>
+      <details key="end" value="830"/>
+      <details key="line" value="32"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/javaAttribute/%.7">
+      <details key="start" value="831"/>
+      <details key="end" value="843"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/javaAttribute/%.7/att">
+      <details key="start" value="831"/>
+      <details key="end" value="834"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
     <eAnnotations source="positions.60" references="/0/javaAttribute/%.8">
-      <details key="start" value="814"/>
-      <details key="end" value="828"/>
+      <details key="start" value="845"/>
+      <details key="end" value="860"/>
       <details key="line" value="32"/>
     </eAnnotations>
     <eAnnotations source="positions.61" references="/0/javaAttribute/%.9">
-      <details key="start" value="829"/>
-      <details key="end" value="837"/>
+      <details key="start" value="861"/>
+      <details key="end" value="869"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.62" references="/0/javaAttribute/%.9/att">
-      <details key="start" value="829"/>
-      <details key="end" value="832"/>
+      <details key="start" value="861"/>
+      <details key="end" value="864"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.63" references="/0/javaAttribute/%.10">
-      <details key="start" value="839"/>
-      <details key="end" value="844"/>
+      <details key="start" value="871"/>
+      <details key="end" value="877"/>
       <details key="line" value="33"/>
     </eAnnotations>
     <eAnnotations source="positions.64" references="/0/javaAttribute/att">
-      <details key="start" value="726"/>
-      <details key="end" value="741"/>
+      <details key="start" value="754"/>
+      <details key="end" value="769"/>
       <details key="line" value="29"/>
     </eAnnotations>
     <eAnnotations source="positions.65" references="/0/javaMethod">
-      <details key="start" value="858"/>
-      <details key="end" value="1074"/>
+      <details key="start" value="894"/>
+      <details key="end" value="1117"/>
       <details key="line" value="37"/>
     </eAnnotations>
     <eAnnotations source="positions.66" references="/0/javaMethod/%">
-      <details key="start" value="903"/>
-      <details key="end" value="911"/>
+      <details key="start" value="940"/>
+      <details key="end" value="948"/>
       <details key="line" value="38"/>
     </eAnnotations>
     <eAnnotations source="positions.67" references="/0/javaMethod/%.1">
-      <details key="start" value="912"/>
-      <details key="end" value="919"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.68" references="/0/javaMethod/%.1/op">
-      <details key="start" value="912"/>
-      <details key="end" value="914"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.69" references="/0/javaMethod/%.2">
-      <details key="start" value="921"/>
-      <details key="end" value="922"/>
-      <details key="line" value="38"/>
-    </eAnnotations>
-    <eAnnotations source="positions.70" references="/0/javaMethod/%.3">
-      <details key="start" value="923"/>
-      <details key="end" value="930"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.71" references="/0/javaMethod/%.3/op">
-      <details key="start" value="923"/>
-      <details key="end" value="925"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.72" references="/0/javaMethod/%.4">
-      <details key="start" value="932"/>
-      <details key="end" value="942"/>
-      <details key="line" value="38"/>
-    </eAnnotations>
-    <eAnnotations source="positions.73" references="/0/javaMethod/%.5">
-      <details key="start" value="942"/>
-      <details key="end" value="1059"/>
-      <details key="line" value="39"/>
-    </eAnnotations>
-    <eAnnotations source="positions.74" references="/0/javaMethod/%.5/%">
-      <details key="start" value="963"/>
-      <details key="end" value="1014"/>
-      <details key="line" value="40"/>
-    </eAnnotations>
-    <eAnnotations source="positions.75" references="/0/javaMethod/%.5/%.1">
-      <details key="start" value="1015"/>
-      <details key="end" value="1039"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.76" references="/0/javaMethod/%.5/%.1/%">
-      <details key="start" value="1031"/>
-      <details key="end" value="1038"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.77" references="/0/javaMethod/%.5/%.1/%/op">
-      <details key="start" value="1031"/>
-      <details key="end" value="1033"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.78" references="/0/javaMethod/%.5/%.2">
-      <details key="start" value="1041"/>
-      <details key="end" value="1047"/>
-      <details key="line" value="42"/>
-    </eAnnotations>
-    <eAnnotations source="positions.79" references="/0/javaMethod/%.5/%.3">
-      <details key="start" value="954"/>
-      <details key="end" value="961"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.80" references="/0/javaMethod/%.5/%.3/op">
-      <details key="start" value="954"/>
+      <details key="start" value="949"/>
       <details key="end" value="956"/>
       <details key="line" value="0"/>
     </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/javaMethod/%.1/op">
+      <details key="start" value="949"/>
+      <details key="end" value="951"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/javaMethod/%.2">
+      <details key="start" value="958"/>
+      <details key="end" value="959"/>
+      <details key="line" value="38"/>
+    </eAnnotations>
+    <eAnnotations source="positions.70" references="/0/javaMethod/%.3">
+      <details key="start" value="960"/>
+      <details key="end" value="967"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/javaMethod/%.3/op">
+      <details key="start" value="960"/>
+      <details key="end" value="962"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.72" references="/0/javaMethod/%.4">
+      <details key="start" value="969"/>
+      <details key="end" value="980"/>
+      <details key="line" value="38"/>
+    </eAnnotations>
+    <eAnnotations source="positions.73" references="/0/javaMethod/%.5">
+      <details key="start" value="980"/>
+      <details key="end" value="1100"/>
+      <details key="line" value="39"/>
+    </eAnnotations>
+    <eAnnotations source="positions.74" references="/0/javaMethod/%.5/%">
+      <details key="start" value="1001"/>
+      <details key="end" value="1054"/>
+      <details key="line" value="40"/>
+    </eAnnotations>
+    <eAnnotations source="positions.75" references="/0/javaMethod/%.5/%.1">
+      <details key="start" value="1055"/>
+      <details key="end" value="1079"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.76" references="/0/javaMethod/%.5/%.1/%">
+      <details key="start" value="1071"/>
+      <details key="end" value="1078"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.77" references="/0/javaMethod/%.5/%.1/%/op">
+      <details key="start" value="1071"/>
+      <details key="end" value="1073"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.78" references="/0/javaMethod/%.5/%.2">
+      <details key="start" value="1081"/>
+      <details key="end" value="1088"/>
+      <details key="line" value="42"/>
+    </eAnnotations>
+    <eAnnotations source="positions.79" references="/0/javaMethod/%.5/%.3">
+      <details key="start" value="992"/>
+      <details key="end" value="999"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.80" references="/0/javaMethod/%.5/%.3/op">
+      <details key="start" value="992"/>
+      <details key="end" value="994"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
     <eAnnotations source="positions.81" references="/0/javaMethod/%.6">
-      <details key="start" value="1059"/>
-      <details key="end" value="1062"/>
+      <details key="start" value="1100"/>
+      <details key="end" value="1104"/>
       <details key="line" value="43"/>
     </eAnnotations>
     <eAnnotations source="positions.82" references="/0/javaMethod/op">
-      <details key="start" value="886"/>
-      <details key="end" value="900"/>
+      <details key="start" value="922"/>
+      <details key="end" value="936"/>
       <details key="line" value="37"/>
     </eAnnotations>
   </ecore:EAnnotation>

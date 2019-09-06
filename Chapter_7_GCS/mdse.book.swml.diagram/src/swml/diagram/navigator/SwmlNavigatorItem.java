@@ -1,6 +1,6 @@
 /*
- * 
- */
+* 
+*/
 package swml.diagram.navigator;
 
 import org.eclipse.core.runtime.IAdapterFactory;
@@ -15,8 +15,8 @@ import org.eclipse.gmf.runtime.notation.View;
 public class SwmlNavigatorItem extends SwmlAbstractNavigatorItem {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	static {
 		final Class[] supportedTypes = new Class[] { View.class, EObject.class };
 		Platform.getAdapterManager().registerAdapters(new IAdapterFactory() {
@@ -24,8 +24,7 @@ public class SwmlNavigatorItem extends SwmlAbstractNavigatorItem {
 			public Object getAdapter(Object adaptableObject, Class adapterType) {
 				if (adaptableObject instanceof swml.diagram.navigator.SwmlNavigatorItem
 						&& (adapterType == View.class || adapterType == EObject.class)) {
-					return ((swml.diagram.navigator.SwmlNavigatorItem) adaptableObject)
-							.getView();
+					return ((swml.diagram.navigator.SwmlNavigatorItem) adaptableObject).getView();
 				}
 				return null;
 			}
@@ -37,18 +36,18 @@ public class SwmlNavigatorItem extends SwmlAbstractNavigatorItem {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private View myView;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private boolean myLeaf = false;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public SwmlNavigatorItem(View view, Object parent, boolean isLeaf) {
 		super(parent);
 		myView = view;
@@ -56,36 +55,33 @@ public class SwmlNavigatorItem extends SwmlAbstractNavigatorItem {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public View getView() {
 		return myView;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public boolean isLeaf() {
 		return myLeaf;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public boolean equals(Object obj) {
 		if (obj instanceof swml.diagram.navigator.SwmlNavigatorItem) {
-			return EcoreUtil
-					.getURI(getView())
-					.equals(EcoreUtil
-							.getURI(((swml.diagram.navigator.SwmlNavigatorItem) obj)
-									.getView()));
+			return EcoreUtil.getURI(getView())
+					.equals(EcoreUtil.getURI(((swml.diagram.navigator.SwmlNavigatorItem) obj).getView()));
 		}
 		return super.equals(obj);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public int hashCode() {
 		return EcoreUtil.getURI(getView()).hashCode();
 	}

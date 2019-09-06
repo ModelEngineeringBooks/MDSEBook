@@ -288,17 +288,42 @@
 
    <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
       <?gmfgen generated="true"?>
-      <modelingAssistantProvider class="swml.diagram.providers.SwmlModelingAssistantProvider">
+      <modelingAssistantProvider class="swml.diagram.providers.assistants.SwmlModelingAssistantProviderOfWebModelEditPart">
          <Priority name="Lowest"/>
          <object class="swml.diagram.edit.parts.WebModelEditPart" id="WebModel_1000"/>
-         <object class="swml.diagram.edit.parts.HypertextLayerEditPart" id="HypertextLayer_2001"/>
-         <object class="swml.diagram.edit.parts.ContentLayerEditPart" id="ContentLayer_2002"/>
-         <object class="swml.diagram.edit.parts.IndexPageEditPart" id="IndexPage_3001"/>
-         <object class="swml.diagram.edit.parts.DetailsPageEditPart" id="DetailsPage_3002"/>
-         <object class="swml.diagram.edit.parts.StaticPageEditPart" id="StaticPage_3003"/>
-         <object class="swml.diagram.edit.parts.ClassEditPart" id="Class_3004"/>
-         <context elements="WebModel_1000,HypertextLayer_2001,ContentLayer_2002,IndexPage_3001,DetailsPage_3002,StaticPage_3003,Class_3004"/>
+         <context elements="WebModel_1000"/>
       </modelingAssistantProvider>
+            <modelingAssistantProvider class="swml.diagram.providers.assistants.SwmlModelingAssistantProviderOfHypertextLayerEditPart">
+         <Priority name="Lowest"/>
+         <object class="swml.diagram.edit.parts.HypertextLayerEditPart" id="HypertextLayer_2001"/>
+         <context elements="HypertextLayer_2001"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="swml.diagram.providers.assistants.SwmlModelingAssistantProviderOfContentLayerEditPart">
+         <Priority name="Lowest"/>
+         <object class="swml.diagram.edit.parts.ContentLayerEditPart" id="ContentLayer_2002"/>
+         <context elements="ContentLayer_2002"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="swml.diagram.providers.assistants.SwmlModelingAssistantProviderOfIndexPageEditPart">
+         <Priority name="Lowest"/>
+         <object class="swml.diagram.edit.parts.IndexPageEditPart" id="IndexPage_3001"/>
+         <context elements="IndexPage_3001"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="swml.diagram.providers.assistants.SwmlModelingAssistantProviderOfDetailsPageEditPart">
+         <Priority name="Lowest"/>
+         <object class="swml.diagram.edit.parts.DetailsPageEditPart" id="DetailsPage_3002"/>
+         <context elements="DetailsPage_3002"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="swml.diagram.providers.assistants.SwmlModelingAssistantProviderOfStaticPageEditPart">
+         <Priority name="Lowest"/>
+         <object class="swml.diagram.edit.parts.StaticPageEditPart" id="StaticPage_3003"/>
+         <context elements="StaticPage_3003"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="swml.diagram.providers.assistants.SwmlModelingAssistantProviderOfClassEditPart">
+         <Priority name="Lowest"/>
+         <object class="swml.diagram.edit.parts.ClassEditPart" id="Class_3004"/>
+         <context elements="Class_3004"/>
+      </modelingAssistantProvider>
+      
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">

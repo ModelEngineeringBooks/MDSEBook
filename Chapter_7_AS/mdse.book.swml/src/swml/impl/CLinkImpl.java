@@ -15,32 +15,30 @@ import swml.SwmlPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>CLink</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
 public class CLinkImpl extends LinkImpl implements CLink
 {
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected CLinkImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return SwmlPackage.Literals.CLINK;
-  }
+		return SwmlPackage.Literals.CLINK;
+	}
 
 } //CLinkImpl

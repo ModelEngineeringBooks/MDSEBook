@@ -1,6 +1,6 @@
 /*
- * 
- */
+* 
+*/
 package swml.diagram.part;
 
 import java.util.Collection;
@@ -46,16 +46,15 @@ import swml.diagram.providers.SwmlElementTypes;
 public class SwmlDiagramUpdater {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static boolean isShortcutOrphaned(View view) {
-		return !view.isSetElement() || view.getElement() == null
-				|| view.getElement().eIsProxy();
+		return !view.isSetElement() || view.getElement() == null || view.getElement().eIsProxy();
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static List<SwmlNodeDescriptor> getSemanticChildren(View view) {
 		switch (SwmlVisualIDRegistry.getVisualID(view)) {
 		case WebModelEditPart.VISUAL_ID:
@@ -69,10 +68,9 @@ public class SwmlDiagramUpdater {
 	}
 
 	/**
-	 * @generated
-	 */
-	public static List<SwmlNodeDescriptor> getWebModel_1000SemanticChildren(
-			View view) {
+	* @generated
+	*/
+	public static List<SwmlNodeDescriptor> getWebModel_1000SemanticChildren(View view) {
 		if (!view.isSetElement()) {
 			return Collections.emptyList();
 		}
@@ -80,16 +78,14 @@ public class SwmlDiagramUpdater {
 		LinkedList<SwmlNodeDescriptor> result = new LinkedList<SwmlNodeDescriptor>();
 		{
 			HypertextLayer childElement = modelElement.getHypertext();
-			int visualID = SwmlVisualIDRegistry.getNodeVisualID(view,
-					childElement);
+			int visualID = SwmlVisualIDRegistry.getNodeVisualID(view, childElement);
 			if (visualID == HypertextLayerEditPart.VISUAL_ID) {
 				result.add(new SwmlNodeDescriptor(childElement, visualID));
 			}
 		}
 		{
 			ContentLayer childElement = modelElement.getContent();
-			int visualID = SwmlVisualIDRegistry.getNodeVisualID(view,
-					childElement);
+			int visualID = SwmlVisualIDRegistry.getNodeVisualID(view, childElement);
 			if (visualID == ContentLayerEditPart.VISUAL_ID) {
 				result.add(new SwmlNodeDescriptor(childElement, visualID));
 			}
@@ -98,8 +94,8 @@ public class SwmlDiagramUpdater {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static List<SwmlNodeDescriptor> getHypertextLayerHypertextLayerPagesCompartment_7001SemanticChildren(
 			View view) {
 		if (false == view.eContainer() instanceof View) {
@@ -109,13 +105,11 @@ public class SwmlDiagramUpdater {
 		if (!containerView.isSetElement()) {
 			return Collections.emptyList();
 		}
-		HypertextLayer modelElement = (HypertextLayer) containerView
-				.getElement();
+		HypertextLayer modelElement = (HypertextLayer) containerView.getElement();
 		LinkedList<SwmlNodeDescriptor> result = new LinkedList<SwmlNodeDescriptor>();
 		for (Iterator<?> it = modelElement.getPages().iterator(); it.hasNext();) {
 			Page childElement = (Page) it.next();
-			int visualID = SwmlVisualIDRegistry.getNodeVisualID(view,
-					childElement);
+			int visualID = SwmlVisualIDRegistry.getNodeVisualID(view, childElement);
 			if (visualID == IndexPageEditPart.VISUAL_ID) {
 				result.add(new SwmlNodeDescriptor(childElement, visualID));
 				continue;
@@ -133,8 +127,8 @@ public class SwmlDiagramUpdater {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static List<SwmlNodeDescriptor> getContentLayerContentLayerClassesCompartment_7002SemanticChildren(
 			View view) {
 		if (false == view.eContainer() instanceof View) {
@@ -146,11 +140,9 @@ public class SwmlDiagramUpdater {
 		}
 		ContentLayer modelElement = (ContentLayer) containerView.getElement();
 		LinkedList<SwmlNodeDescriptor> result = new LinkedList<SwmlNodeDescriptor>();
-		for (Iterator<?> it = modelElement.getClasses().iterator(); it
-				.hasNext();) {
+		for (Iterator<?> it = modelElement.getClasses().iterator(); it.hasNext();) {
 			Class childElement = (Class) it.next();
-			int visualID = SwmlVisualIDRegistry.getNodeVisualID(view,
-					childElement);
+			int visualID = SwmlVisualIDRegistry.getNodeVisualID(view, childElement);
 			if (visualID == ClassEditPart.VISUAL_ID) {
 				result.add(new SwmlNodeDescriptor(childElement, visualID));
 				continue;
@@ -160,8 +152,8 @@ public class SwmlDiagramUpdater {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static List<SwmlLinkDescriptor> getContainedLinks(View view) {
 		switch (SwmlVisualIDRegistry.getVisualID(view)) {
 		case WebModelEditPart.VISUAL_ID:
@@ -187,8 +179,8 @@ public class SwmlDiagramUpdater {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static List<SwmlLinkDescriptor> getIncomingLinks(View view) {
 		switch (SwmlVisualIDRegistry.getVisualID(view)) {
 		case HypertextLayerEditPart.VISUAL_ID:
@@ -212,8 +204,8 @@ public class SwmlDiagramUpdater {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static List<SwmlLinkDescriptor> getOutgoingLinks(View view) {
 		switch (SwmlVisualIDRegistry.getVisualID(view)) {
 		case HypertextLayerEditPart.VISUAL_ID:
@@ -239,32 +231,28 @@ public class SwmlDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<SwmlLinkDescriptor> getWebModel_1000ContainedLinks(
-			View view) {
+	public static List<SwmlLinkDescriptor> getWebModel_1000ContainedLinks(View view) {
 		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List<SwmlLinkDescriptor> getHypertextLayer_2001ContainedLinks(
-			View view) {
+	public static List<SwmlLinkDescriptor> getHypertextLayer_2001ContainedLinks(View view) {
 		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List<SwmlLinkDescriptor> getContentLayer_2002ContainedLinks(
-			View view) {
+	public static List<SwmlLinkDescriptor> getContentLayer_2002ContainedLinks(View view) {
 		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List<SwmlLinkDescriptor> getIndexPage_3001ContainedLinks(
-			View view) {
+	public static List<SwmlLinkDescriptor> getIndexPage_3001ContainedLinks(View view) {
 		IndexPage modelElement = (IndexPage) view.getElement();
 		LinkedList<SwmlLinkDescriptor> result = new LinkedList<SwmlLinkDescriptor>();
 		result.addAll(getContainedTypeModelFacetLinks_NCLink_4001(modelElement));
@@ -275,8 +263,7 @@ public class SwmlDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<SwmlLinkDescriptor> getDetailsPage_3002ContainedLinks(
-			View view) {
+	public static List<SwmlLinkDescriptor> getDetailsPage_3002ContainedLinks(View view) {
 		DetailsPage modelElement = (DetailsPage) view.getElement();
 		LinkedList<SwmlLinkDescriptor> result = new LinkedList<SwmlLinkDescriptor>();
 		result.addAll(getContainedTypeModelFacetLinks_NCLink_4001(modelElement));
@@ -287,8 +274,7 @@ public class SwmlDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<SwmlLinkDescriptor> getStaticPage_3003ContainedLinks(
-			View view) {
+	public static List<SwmlLinkDescriptor> getStaticPage_3003ContainedLinks(View view) {
 		StaticPage modelElement = (StaticPage) view.getElement();
 		LinkedList<SwmlLinkDescriptor> result = new LinkedList<SwmlLinkDescriptor>();
 		result.addAll(getContainedTypeModelFacetLinks_NCLink_4001(modelElement));
@@ -306,8 +292,7 @@ public class SwmlDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<SwmlLinkDescriptor> getNCLink_4001ContainedLinks(
-			View view) {
+	public static List<SwmlLinkDescriptor> getNCLink_4001ContainedLinks(View view) {
 		return Collections.emptyList();
 	}
 
@@ -321,64 +306,53 @@ public class SwmlDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<SwmlLinkDescriptor> getHypertextLayer_2001IncomingLinks(
-			View view) {
+	public static List<SwmlLinkDescriptor> getHypertextLayer_2001IncomingLinks(View view) {
 		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List<SwmlLinkDescriptor> getContentLayer_2002IncomingLinks(
-			View view) {
+	public static List<SwmlLinkDescriptor> getContentLayer_2002IncomingLinks(View view) {
 		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List<SwmlLinkDescriptor> getIndexPage_3001IncomingLinks(
-			View view) {
+	public static List<SwmlLinkDescriptor> getIndexPage_3001IncomingLinks(View view) {
 		IndexPage modelElement = (IndexPage) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<SwmlLinkDescriptor> result = new LinkedList<SwmlLinkDescriptor>();
-		result.addAll(getIncomingTypeModelFacetLinks_NCLink_4001(modelElement,
-				crossReferences));
-		result.addAll(getIncomingTypeModelFacetLinks_CLink_4002(modelElement,
-				crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_NCLink_4001(modelElement, crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_CLink_4002(modelElement, crossReferences));
 		return result;
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List<SwmlLinkDescriptor> getDetailsPage_3002IncomingLinks(
-			View view) {
+	public static List<SwmlLinkDescriptor> getDetailsPage_3002IncomingLinks(View view) {
 		DetailsPage modelElement = (DetailsPage) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<SwmlLinkDescriptor> result = new LinkedList<SwmlLinkDescriptor>();
-		result.addAll(getIncomingTypeModelFacetLinks_NCLink_4001(modelElement,
-				crossReferences));
-		result.addAll(getIncomingTypeModelFacetLinks_CLink_4002(modelElement,
-				crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_NCLink_4001(modelElement, crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_CLink_4002(modelElement, crossReferences));
 		return result;
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List<SwmlLinkDescriptor> getStaticPage_3003IncomingLinks(
-			View view) {
+	public static List<SwmlLinkDescriptor> getStaticPage_3003IncomingLinks(View view) {
 		StaticPage modelElement = (StaticPage) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<SwmlLinkDescriptor> result = new LinkedList<SwmlLinkDescriptor>();
-		result.addAll(getIncomingTypeModelFacetLinks_NCLink_4001(modelElement,
-				crossReferences));
-		result.addAll(getIncomingTypeModelFacetLinks_CLink_4002(modelElement,
-				crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_NCLink_4001(modelElement, crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_CLink_4002(modelElement, crossReferences));
 		return result;
 	}
 
@@ -406,52 +380,47 @@ public class SwmlDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<SwmlLinkDescriptor> getHypertextLayer_2001OutgoingLinks(
-			View view) {
+	public static List<SwmlLinkDescriptor> getHypertextLayer_2001OutgoingLinks(View view) {
 		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List<SwmlLinkDescriptor> getContentLayer_2002OutgoingLinks(
-			View view) {
+	public static List<SwmlLinkDescriptor> getContentLayer_2002OutgoingLinks(View view) {
 		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List<SwmlLinkDescriptor> getIndexPage_3001OutgoingLinks(
-			View view) {
+	public static List<SwmlLinkDescriptor> getIndexPage_3001OutgoingLinks(View view) {
 		IndexPage modelElement = (IndexPage) view.getElement();
 		LinkedList<SwmlLinkDescriptor> result = new LinkedList<SwmlLinkDescriptor>();
-		result.addAll(getContainedTypeModelFacetLinks_NCLink_4001(modelElement));
-		result.addAll(getContainedTypeModelFacetLinks_CLink_4002(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_NCLink_4001(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_CLink_4002(modelElement));
 		return result;
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List<SwmlLinkDescriptor> getDetailsPage_3002OutgoingLinks(
-			View view) {
+	public static List<SwmlLinkDescriptor> getDetailsPage_3002OutgoingLinks(View view) {
 		DetailsPage modelElement = (DetailsPage) view.getElement();
 		LinkedList<SwmlLinkDescriptor> result = new LinkedList<SwmlLinkDescriptor>();
-		result.addAll(getContainedTypeModelFacetLinks_NCLink_4001(modelElement));
-		result.addAll(getContainedTypeModelFacetLinks_CLink_4002(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_NCLink_4001(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_CLink_4002(modelElement));
 		return result;
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List<SwmlLinkDescriptor> getStaticPage_3003OutgoingLinks(
-			View view) {
+	public static List<SwmlLinkDescriptor> getStaticPage_3003OutgoingLinks(View view) {
 		StaticPage modelElement = (StaticPage) view.getElement();
 		LinkedList<SwmlLinkDescriptor> result = new LinkedList<SwmlLinkDescriptor>();
-		result.addAll(getContainedTypeModelFacetLinks_NCLink_4001(modelElement));
-		result.addAll(getContainedTypeModelFacetLinks_CLink_4002(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_NCLink_4001(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_CLink_4002(modelElement));
 		return result;
 	}
 
@@ -477,49 +446,43 @@ public class SwmlDiagramUpdater {
 	}
 
 	/**
-	 * @generated
-	 */
-	private static Collection<SwmlLinkDescriptor> getContainedTypeModelFacetLinks_NCLink_4001(
-			Page container) {
+	* @generated
+	*/
+	private static Collection<SwmlLinkDescriptor> getContainedTypeModelFacetLinks_NCLink_4001(Page container) {
 		LinkedList<SwmlLinkDescriptor> result = new LinkedList<SwmlLinkDescriptor>();
-		for (Iterator<?> links = container.getLinks().iterator(); links
-				.hasNext();) {
+		for (Iterator<?> links = container.getLinks().iterator(); links.hasNext();) {
 			EObject linkObject = (EObject) links.next();
 			if (false == linkObject instanceof NCLink) {
 				continue;
 			}
 			NCLink link = (NCLink) linkObject;
-			if (NCLinkEditPart.VISUAL_ID != SwmlVisualIDRegistry
-					.getLinkWithClassVisualID(link)) {
+			if (NCLinkEditPart.VISUAL_ID != SwmlVisualIDRegistry.getLinkWithClassVisualID(link)) {
 				continue;
 			}
 			Page dst = link.getTarget();
-			result.add(new SwmlLinkDescriptor(container, dst, link,
-					SwmlElementTypes.NCLink_4001, NCLinkEditPart.VISUAL_ID));
+			Page src = link.getSource();
+			result.add(new SwmlLinkDescriptor(src, dst, link, SwmlElementTypes.NCLink_4001, NCLinkEditPart.VISUAL_ID));
 		}
 		return result;
 	}
 
 	/**
-	 * @generated
-	 */
-	private static Collection<SwmlLinkDescriptor> getContainedTypeModelFacetLinks_CLink_4002(
-			Page container) {
+	* @generated
+	*/
+	private static Collection<SwmlLinkDescriptor> getContainedTypeModelFacetLinks_CLink_4002(Page container) {
 		LinkedList<SwmlLinkDescriptor> result = new LinkedList<SwmlLinkDescriptor>();
-		for (Iterator<?> links = container.getLinks().iterator(); links
-				.hasNext();) {
+		for (Iterator<?> links = container.getLinks().iterator(); links.hasNext();) {
 			EObject linkObject = (EObject) links.next();
 			if (false == linkObject instanceof CLink) {
 				continue;
 			}
 			CLink link = (CLink) linkObject;
-			if (CLinkEditPart.VISUAL_ID != SwmlVisualIDRegistry
-					.getLinkWithClassVisualID(link)) {
+			if (CLinkEditPart.VISUAL_ID != SwmlVisualIDRegistry.getLinkWithClassVisualID(link)) {
 				continue;
 			}
 			Page dst = link.getTarget();
-			result.add(new SwmlLinkDescriptor(container, dst, link,
-					SwmlElementTypes.CLink_4002, CLinkEditPart.VISUAL_ID));
+			Page src = link.getSource();
+			result.add(new SwmlLinkDescriptor(src, dst, link, SwmlElementTypes.CLink_4002, CLinkEditPart.VISUAL_ID));
 		}
 		return result;
 	}
@@ -527,30 +490,22 @@ public class SwmlDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection<SwmlLinkDescriptor> getIncomingTypeModelFacetLinks_NCLink_4001(
-			Page target,
+	private static Collection<SwmlLinkDescriptor> getIncomingTypeModelFacetLinks_NCLink_4001(Page target,
 			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
 		LinkedList<SwmlLinkDescriptor> result = new LinkedList<SwmlLinkDescriptor>();
-		Collection<EStructuralFeature.Setting> settings = crossReferences
-				.get(target);
+		Collection<EStructuralFeature.Setting> settings = crossReferences.get(target);
 		for (EStructuralFeature.Setting setting : settings) {
-			if (setting.getEStructuralFeature() != SwmlPackage.eINSTANCE
-					.getLink_Target()
+			if (setting.getEStructuralFeature() != SwmlPackage.eINSTANCE.getLink_Target()
 					|| false == setting.getEObject() instanceof NCLink) {
 				continue;
 			}
 			NCLink link = (NCLink) setting.getEObject();
-			if (NCLinkEditPart.VISUAL_ID != SwmlVisualIDRegistry
-					.getLinkWithClassVisualID(link)) {
+			if (NCLinkEditPart.VISUAL_ID != SwmlVisualIDRegistry.getLinkWithClassVisualID(link)) {
 				continue;
 			}
-			if (false == link.eContainer() instanceof Page) {
-				continue;
-			}
-			Page container = (Page) link.eContainer();
-			result.add(new SwmlLinkDescriptor(container, target, link,
-					SwmlElementTypes.NCLink_4001, NCLinkEditPart.VISUAL_ID));
-
+			Page src = link.getSource();
+			result.add(
+					new SwmlLinkDescriptor(src, target, link, SwmlElementTypes.NCLink_4001, NCLinkEditPart.VISUAL_ID));
 		}
 		return result;
 	}
@@ -558,66 +513,133 @@ public class SwmlDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection<SwmlLinkDescriptor> getIncomingTypeModelFacetLinks_CLink_4002(
-			Page target,
+	private static Collection<SwmlLinkDescriptor> getIncomingTypeModelFacetLinks_CLink_4002(Page target,
 			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
 		LinkedList<SwmlLinkDescriptor> result = new LinkedList<SwmlLinkDescriptor>();
-		Collection<EStructuralFeature.Setting> settings = crossReferences
-				.get(target);
+		Collection<EStructuralFeature.Setting> settings = crossReferences.get(target);
 		for (EStructuralFeature.Setting setting : settings) {
-			if (setting.getEStructuralFeature() != SwmlPackage.eINSTANCE
-					.getLink_Target()
+			if (setting.getEStructuralFeature() != SwmlPackage.eINSTANCE.getLink_Target()
 					|| false == setting.getEObject() instanceof CLink) {
 				continue;
 			}
 			CLink link = (CLink) setting.getEObject();
-			if (CLinkEditPart.VISUAL_ID != SwmlVisualIDRegistry
-					.getLinkWithClassVisualID(link)) {
+			if (CLinkEditPart.VISUAL_ID != SwmlVisualIDRegistry.getLinkWithClassVisualID(link)) {
 				continue;
 			}
-			if (false == link.eContainer() instanceof Page) {
-				continue;
-			}
-			Page container = (Page) link.eContainer();
-			result.add(new SwmlLinkDescriptor(container, target, link,
-					SwmlElementTypes.CLink_4002, CLinkEditPart.VISUAL_ID));
-
+			Page src = link.getSource();
+			result.add(new SwmlLinkDescriptor(src, target, link, SwmlElementTypes.CLink_4002, CLinkEditPart.VISUAL_ID));
 		}
 		return result;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
+	private static Collection<SwmlLinkDescriptor> getOutgoingTypeModelFacetLinks_NCLink_4001(Page source) {
+		Page container = null;
+		// Find container element for the link.
+		// Climb up by containment hierarchy starting from the source
+		// and return the first element that is instance of the container class.
+		for (EObject element = source; element != null && container == null; element = element.eContainer()) {
+			if (element instanceof Page) {
+				container = (Page) element;
+			}
+		}
+		if (container == null) {
+			return Collections.emptyList();
+		}
+		LinkedList<SwmlLinkDescriptor> result = new LinkedList<SwmlLinkDescriptor>();
+		for (Iterator<?> links = container.getLinks().iterator(); links.hasNext();) {
+			EObject linkObject = (EObject) links.next();
+			if (false == linkObject instanceof NCLink) {
+				continue;
+			}
+			NCLink link = (NCLink) linkObject;
+			if (NCLinkEditPart.VISUAL_ID != SwmlVisualIDRegistry.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			Page dst = link.getTarget();
+			Page src = link.getSource();
+			if (src != source) {
+				continue;
+			}
+			result.add(new SwmlLinkDescriptor(src, dst, link, SwmlElementTypes.NCLink_4001, NCLinkEditPart.VISUAL_ID));
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	private static Collection<SwmlLinkDescriptor> getOutgoingTypeModelFacetLinks_CLink_4002(Page source) {
+		Page container = null;
+		// Find container element for the link.
+		// Climb up by containment hierarchy starting from the source
+		// and return the first element that is instance of the container class.
+		for (EObject element = source; element != null && container == null; element = element.eContainer()) {
+			if (element instanceof Page) {
+				container = (Page) element;
+			}
+		}
+		if (container == null) {
+			return Collections.emptyList();
+		}
+		LinkedList<SwmlLinkDescriptor> result = new LinkedList<SwmlLinkDescriptor>();
+		for (Iterator<?> links = container.getLinks().iterator(); links.hasNext();) {
+			EObject linkObject = (EObject) links.next();
+			if (false == linkObject instanceof CLink) {
+				continue;
+			}
+			CLink link = (CLink) linkObject;
+			if (CLinkEditPart.VISUAL_ID != SwmlVisualIDRegistry.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			Page dst = link.getTarget();
+			Page src = link.getSource();
+			if (src != source) {
+				continue;
+			}
+			result.add(new SwmlLinkDescriptor(src, dst, link, SwmlElementTypes.CLink_4002, CLinkEditPart.VISUAL_ID));
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
 	public static final DiagramUpdater TYPED_INSTANCE = new DiagramUpdater() {
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		@Override
+
 		public List<SwmlNodeDescriptor> getSemanticChildren(View view) {
 			return SwmlDiagramUpdater.getSemanticChildren(view);
 		}
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		@Override
+
 		public List<SwmlLinkDescriptor> getContainedLinks(View view) {
 			return SwmlDiagramUpdater.getContainedLinks(view);
 		}
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		@Override
+
 		public List<SwmlLinkDescriptor> getIncomingLinks(View view) {
 			return SwmlDiagramUpdater.getIncomingLinks(view);
 		}
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		@Override
+
 		public List<SwmlLinkDescriptor> getOutgoingLinks(View view) {
 			return SwmlDiagramUpdater.getOutgoingLinks(view);
 		}

@@ -15,24 +15,22 @@ import org.eclipse.ui.IWorkbenchPart;
 /**
  * @generated
  */
-public class DiagramEditorContextMenuProvider extends
-		DiagramContextMenuProvider {
+public class DiagramEditorContextMenuProvider extends DiagramContextMenuProvider {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private IWorkbenchPart part;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private DeleteElementAction deleteAction;
 
 	/**
-	 * @generated
-	 */
-	public DiagramEditorContextMenuProvider(IWorkbenchPart part,
-			EditPartViewer viewer) {
+	* @generated
+	*/
+	public DiagramEditorContextMenuProvider(IWorkbenchPart part, EditPartViewer viewer) {
 		super(part, viewer);
 		this.part = part;
 		deleteAction = new DeleteElementAction(part);
@@ -40,8 +38,8 @@ public class DiagramEditorContextMenuProvider extends
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void dispose() {
 		if (deleteAction != null) {
 			deleteAction.dispose();
@@ -51,28 +49,23 @@ public class DiagramEditorContextMenuProvider extends
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void buildContextMenu(final IMenuManager menu) {
 		getViewer().flush();
 		try {
-			TransactionUtil.getEditingDomain(
-					(EObject) getViewer().getContents().getModel())
+			TransactionUtil.getEditingDomain((EObject) getViewer().getContents().getModel())
 					.runExclusive(new Runnable() {
 
 						public void run() {
-							ContributionItemService
-									.getInstance()
-									.contributeToPopupMenu(
-											DiagramEditorContextMenuProvider.this,
-											part);
+							ContributionItemService.getInstance()
+									.contributeToPopupMenu(DiagramEditorContextMenuProvider.this, part);
 							menu.remove(ActionIds.ACTION_DELETE_FROM_MODEL);
 							menu.appendToGroup("editGroup", deleteAction);
 						}
 					});
 		} catch (Exception e) {
-			SwmlDiagramEditorPlugin.getInstance().logError(
-					"Error building context menu", e);
+			SwmlDiagramEditorPlugin.getInstance().logError("Error building context menu", e);
 		}
 	}
 }

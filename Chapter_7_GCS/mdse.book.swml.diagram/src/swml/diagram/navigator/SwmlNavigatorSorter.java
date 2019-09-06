@@ -1,6 +1,6 @@
 /*
- * 
- */
+* 
+*/
 package swml.diagram.navigator;
 
 import org.eclipse.jface.viewers.ViewerSorter;
@@ -13,18 +13,18 @@ import swml.diagram.part.SwmlVisualIDRegistry;
 public class SwmlNavigatorSorter extends ViewerSorter {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private static final int GROUP_CATEGORY = 7004;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private static final int SHORTCUTS_CATEGORY = 7003;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public int category(Object element) {
 		if (element instanceof SwmlNavigatorItem) {
 			SwmlNavigatorItem item = (SwmlNavigatorItem) element;

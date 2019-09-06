@@ -18,8 +18,8 @@ import swml.diagram.part.SwmlVisualIDRegistry;
 public class SwmlEditPartFactory implements EditPartFactory {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public EditPart createEditPart(EditPart context, Object model) {
 		if (model instanceof View) {
 			View view = (View) model;
@@ -31,14 +31,14 @@ public class SwmlEditPartFactory implements EditPartFactory {
 			case HypertextLayerEditPart.VISUAL_ID:
 				return new HypertextLayerEditPart(view);
 
-			case WrappingLabelEditPart.VISUAL_ID:
-				return new WrappingLabelEditPart(view);
+			case HypertextLayerNameEditPart.VISUAL_ID:
+				return new HypertextLayerNameEditPart(view);
 
 			case ContentLayerEditPart.VISUAL_ID:
 				return new ContentLayerEditPart(view);
 
-			case WrappingLabel2EditPart.VISUAL_ID:
-				return new WrappingLabel2EditPart(view);
+			case ContentLayerNameEditPart.VISUAL_ID:
+				return new ContentLayerNameEditPart(view);
 
 			case IndexPageEditPart.VISUAL_ID:
 				return new IndexPageEditPart(view);
@@ -65,12 +65,10 @@ public class SwmlEditPartFactory implements EditPartFactory {
 				return new ClassNameEditPart(view);
 
 			case HypertextLayerHypertextLayerPagesCompartmentEditPart.VISUAL_ID:
-				return new HypertextLayerHypertextLayerPagesCompartmentEditPart(
-						view);
+				return new HypertextLayerHypertextLayerPagesCompartmentEditPart(view);
 
 			case ContentLayerContentLayerClassesCompartmentEditPart.VISUAL_ID:
-				return new ContentLayerContentLayerClassesCompartmentEditPart(
-						view);
+				return new ContentLayerContentLayerClassesCompartmentEditPart(view);
 
 			case NCLinkEditPart.VISUAL_ID:
 				return new NCLinkEditPart(view);
@@ -84,20 +82,18 @@ public class SwmlEditPartFactory implements EditPartFactory {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private EditPart createUnrecognizedEditPart(EditPart context, Object model) {
 		// Handle creation of unrecognized child node EditParts here
 		return null;
 	}
 
 	/**
-	 * @generated
-	 */
-	public static CellEditorLocator getTextCellEditorLocator(
-			ITextAwareEditPart source) {
-		return CellEditorLocatorAccess.INSTANCE
-				.getTextCellEditorLocator(source);
+	* @generated
+	*/
+	public static CellEditorLocator getTextCellEditorLocator(ITextAwareEditPart source) {
+		return CellEditorLocatorAccess.INSTANCE.getTextCellEditorLocator(source);
 	}
 
 }

@@ -15,32 +15,30 @@ import swml.SwmlPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Static Page</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
 public class StaticPageImpl extends PageImpl implements StaticPage
 {
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected StaticPageImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return SwmlPackage.Literals.STATIC_PAGE;
-  }
+		return SwmlPackage.Literals.STATIC_PAGE;
+	}
 
 } //StaticPageImpl

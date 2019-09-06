@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
-  <mtl:Module name="main" nsURI="book::codeGen::files::main" startHeaderPosition="29" endHeaderPosition="76">
+  <mtl:Module name="main" nsURI="book::codeGen::files::main" startHeaderPosition="30" endHeaderPosition="77">
     <input>
       <takesTypesFrom href="http://www.mdse-book.org/smvcml#/"/>
     </input>
     <imports href="generateJavaClass.emtl#/0"/>
     <ownedModuleElement xsi:type="mtl:Template" name="mainClass" visibility="Public" main="true">
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#xA;"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#xD;&#xA;"/>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;"/>
       <body xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/6/Sequence(String)">
         <source xsi:type="ocl.ecore:OperationCallExp" eType="/6/OrderedSet(Class)" referredOperation="/1/oclstdlib_Collection(T)_Class/filter">
@@ -31,7 +31,7 @@
           <eType xsi:type="ecore:EClass" href="http://www.mdse-book.org/smvcml#//Class"/>
         </iterator>
       </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#x9;"/>
       <parameter name="aModel">
         <eType xsi:type="ecore:EClass" href="http://www.mdse-book.org/smvcml#//Model"/>
       </parameter>
@@ -164,43 +164,43 @@
   </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/mainClass">
-      <details key="start" value="132"/>
-      <details key="end" value="257"/>
+      <details key="start" value="138"/>
+      <details key="end" value="268"/>
       <details key="line" value="7"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/mainClass/%">
-      <details key="start" value="176"/>
-      <details key="end" value="178"/>
+      <details key="start" value="183"/>
+      <details key="end" value="186"/>
       <details key="line" value="8"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/mainClass/%.1">
-      <details key="start" value="197"/>
-      <details key="end" value="198"/>
+      <details key="start" value="206"/>
+      <details key="end" value="207"/>
       <details key="line" value="10"/>
     </eAnnotations>
     <eAnnotations source="positions.3" references="/0/mainClass/collect">
-      <details key="start" value="199"/>
-      <details key="end" value="241"/>
+      <details key="start" value="208"/>
+      <details key="end" value="250"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.4" references="/0/mainClass/collect/%">
-      <details key="start" value="199"/>
-      <details key="end" value="229"/>
+      <details key="start" value="208"/>
+      <details key="end" value="238"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.5" references="/0/mainClass/collect/%/%">
-      <details key="start" value="199"/>
-      <details key="end" value="214"/>
+      <details key="start" value="208"/>
+      <details key="end" value="223"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.6" references="/0/mainClass/collect/%/%/aModel">
-      <details key="start" value="199"/>
-      <details key="end" value="205"/>
+      <details key="start" value="208"/>
+      <details key="end" value="214"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.7" references="/0/mainClass/collect/%/%.1">
-      <details key="start" value="223"/>
-      <details key="end" value="228"/>
+      <details key="start" value="232"/>
+      <details key="end" value="237"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.8" references="/0/mainClass/collect/%.1">
@@ -219,13 +219,13 @@
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.11" references="/0/mainClass/%.2">
-      <details key="start" value="243"/>
-      <details key="end" value="245"/>
+      <details key="start" value="252"/>
+      <details key="end" value="255"/>
       <details key="line" value="11"/>
     </eAnnotations>
     <eAnnotations source="positions.12" references="/0/mainClass/aModel">
-      <details key="start" value="159"/>
-      <details key="end" value="173"/>
+      <details key="start" value="165"/>
+      <details key="end" value="179"/>
       <details key="line" value="7"/>
     </eAnnotations>
   </ecore:EAnnotation>

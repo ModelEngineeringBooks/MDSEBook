@@ -39,781 +39,832 @@ import swml.WebModel;
 public class SwmlPackageImpl extends EPackageImpl implements SwmlPackage
 {
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass webModelEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass hypertextLayerEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass contentLayerEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass classEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass attributeEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass pageEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass indexPageEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass detailsPageEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass dynamicPageEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass staticPageEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass linkEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass ncLinkEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass cLinkEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EEnum swmlTypesEEnum = null;
 
   /**
-   * Creates an instance of the model <b>Package</b>, registered with
-   * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
-   * package URI value.
-   * <p>Note: the correct way to create the package is via the static
-   * factory method {@link #init init()}, which also performs
-   * initialization of the package, or returns the registered package,
-   * if one already exists.
-   * <!-- begin-user-doc -->
+	 * Creates an instance of the model <b>Package</b>, registered with
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * package URI value.
+	 * <p>Note: the correct way to create the package is via the static
+	 * factory method {@link #init init()}, which also performs
+	 * initialization of the package, or returns the registered package,
+	 * if one already exists.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.eclipse.emf.ecore.EPackage.Registry
-   * @see swml.SwmlPackage#eNS_URI
-   * @see #init()
-   * @generated
-   */
+	 * @see org.eclipse.emf.ecore.EPackage.Registry
+	 * @see swml.SwmlPackage#eNS_URI
+	 * @see #init()
+	 * @generated
+	 */
   private SwmlPackageImpl()
   {
-    super(eNS_URI, SwmlFactory.eINSTANCE);
-  }
+		super(eNS_URI, SwmlFactory.eINSTANCE);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private static boolean isInited = false;
 
   /**
-   * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-   * 
-   * <p>This method is used to initialize {@link SwmlPackage#eINSTANCE} when that field is accessed.
-   * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
-   * <!-- begin-user-doc -->
+	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+	 *
+	 * <p>This method is used to initialize {@link SwmlPackage#eINSTANCE} when that field is accessed.
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #eNS_URI
-   * @see #createPackageContents()
-   * @see #initializePackageContents()
-   * @generated
-   */
+	 * @see #eNS_URI
+	 * @see #createPackageContents()
+	 * @see #initializePackageContents()
+	 * @generated
+	 */
   public static SwmlPackage init()
   {
-    if (isInited) return (SwmlPackage)EPackage.Registry.INSTANCE.getEPackage(SwmlPackage.eNS_URI);
+		if (isInited) return (SwmlPackage)EPackage.Registry.INSTANCE.getEPackage(SwmlPackage.eNS_URI);
 
-    // Obtain or create and register package
-    SwmlPackageImpl theSwmlPackage = (SwmlPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof SwmlPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new SwmlPackageImpl());
+		// Obtain or create and register package
+		Object registeredSwmlPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		SwmlPackageImpl theSwmlPackage = registeredSwmlPackage instanceof SwmlPackageImpl ? (SwmlPackageImpl)registeredSwmlPackage : new SwmlPackageImpl();
 
-    isInited = true;
+		isInited = true;
 
-    // Create package meta-data objects
-    theSwmlPackage.createPackageContents();
+		// Create package meta-data objects
+		theSwmlPackage.createPackageContents();
 
-    // Initialize created meta-data
-    theSwmlPackage.initializePackageContents();
+		// Initialize created meta-data
+		theSwmlPackage.initializePackageContents();
 
-    // Mark meta-data to indicate it can't be changed
-    theSwmlPackage.freeze();
+		// Mark meta-data to indicate it can't be changed
+		theSwmlPackage.freeze();
 
-  
-    // Update the registry and return the package
-    EPackage.Registry.INSTANCE.put(SwmlPackage.eNS_URI, theSwmlPackage);
-    return theSwmlPackage;
-  }
+		// Update the registry and return the package
+		EPackage.Registry.INSTANCE.put(SwmlPackage.eNS_URI, theSwmlPackage);
+		return theSwmlPackage;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getWebModel()
+	 * @generated
+	 */
+  @Override
+		public EClass getWebModel()
   {
-    return webModelEClass;
-  }
+		return webModelEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getWebModel_Hypertext()
+	 * @generated
+	 */
+  @Override
+		public EReference getWebModel_Hypertext()
   {
-    return (EReference)webModelEClass.getEStructuralFeatures().get(0);
-  }
+		return (EReference)webModelEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getWebModel_Content()
+	 * @generated
+	 */
+  @Override
+		public EReference getWebModel_Content()
   {
-    return (EReference)webModelEClass.getEStructuralFeatures().get(1);
-  }
+		return (EReference)webModelEClass.getEStructuralFeatures().get(1);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getWebModel_Name()
+	 * @generated
+	 */
+  @Override
+		public EAttribute getWebModel_Name()
   {
-    return (EAttribute)webModelEClass.getEStructuralFeatures().get(2);
-  }
+		return (EAttribute)webModelEClass.getEStructuralFeatures().get(2);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getHypertextLayer()
+	 * @generated
+	 */
+  @Override
+		public EClass getHypertextLayer()
   {
-    return hypertextLayerEClass;
-  }
+		return hypertextLayerEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getHypertextLayer_Pages()
+	 * @generated
+	 */
+  @Override
+		public EReference getHypertextLayer_Pages()
   {
-    return (EReference)hypertextLayerEClass.getEStructuralFeatures().get(0);
-  }
+		return (EReference)hypertextLayerEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getHypertextLayer_HomePage()
+	 * @generated
+	 */
+  @Override
+		public EReference getHypertextLayer_HomePage()
   {
-    return (EReference)hypertextLayerEClass.getEStructuralFeatures().get(1);
-  }
+		return (EReference)hypertextLayerEClass.getEStructuralFeatures().get(1);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getHypertextLayer_Name() {
+		return (EAttribute)hypertextLayerEClass.getEStructuralFeatures().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getContentLayer()
+	 * @generated
+	 */
+  @Override
+		public EClass getContentLayer()
   {
-    return contentLayerEClass;
-  }
+		return contentLayerEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getContentLayer_Classes()
+	 * @generated
+	 */
+  @Override
+		public EReference getContentLayer_Classes()
   {
-    return (EReference)contentLayerEClass.getEStructuralFeatures().get(0);
-  }
+		return (EReference)contentLayerEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getContentLayer_Name() {
+		return (EAttribute)contentLayerEClass.getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getClass_()
+	 * @generated
+	 */
+  @Override
+		public EClass getClass_()
   {
-    return classEClass;
-  }
+		return classEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getClass_Attributes()
+	 * @generated
+	 */
+  @Override
+		public EReference getClass_Attributes()
   {
-    return (EReference)classEClass.getEStructuralFeatures().get(0);
-  }
+		return (EReference)classEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getClass_RepresentativeAttribute()
+	 * @generated
+	 */
+  @Override
+		public EReference getClass_RepresentativeAttribute()
   {
-    return (EReference)classEClass.getEStructuralFeatures().get(1);
-  }
+		return (EReference)classEClass.getEStructuralFeatures().get(1);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getClass_Name()
+	 * @generated
+	 */
+  @Override
+		public EAttribute getClass_Name()
   {
-    return (EAttribute)classEClass.getEStructuralFeatures().get(2);
-  }
+		return (EAttribute)classEClass.getEStructuralFeatures().get(2);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getAttribute()
+	 * @generated
+	 */
+  @Override
+		public EClass getAttribute()
   {
-    return attributeEClass;
-  }
+		return attributeEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getAttribute_Name()
+	 * @generated
+	 */
+  @Override
+		public EAttribute getAttribute_Name()
   {
-    return (EAttribute)attributeEClass.getEStructuralFeatures().get(0);
-  }
+		return (EAttribute)attributeEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getAttribute_Type()
+	 * @generated
+	 */
+  @Override
+		public EAttribute getAttribute_Type()
   {
-    return (EAttribute)attributeEClass.getEStructuralFeatures().get(1);
-  }
+		return (EAttribute)attributeEClass.getEStructuralFeatures().get(1);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getPage()
+	 * @generated
+	 */
+  @Override
+		public EClass getPage()
   {
-    return pageEClass;
-  }
+		return pageEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getPage_Name()
+	 * @generated
+	 */
+  @Override
+		public EAttribute getPage_Name()
   {
-    return (EAttribute)pageEClass.getEStructuralFeatures().get(0);
-  }
+		return (EAttribute)pageEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPage_Links()
+	 * @generated
+	 */
+  @Override
+		public EReference getPage_Links()
   {
-    return (EReference)pageEClass.getEStructuralFeatures().get(1);
-  }
+		return (EReference)pageEClass.getEStructuralFeatures().get(1);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getIndexPage()
+	 * @generated
+	 */
+  @Override
+		public EClass getIndexPage()
   {
-    return indexPageEClass;
-  }
+		return indexPageEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getIndexPage_Size()
+	 * @generated
+	 */
+  @Override
+		public EAttribute getIndexPage_Size()
   {
-    return (EAttribute)indexPageEClass.getEStructuralFeatures().get(0);
-  }
+		return (EAttribute)indexPageEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getDetailsPage()
+	 * @generated
+	 */
+  @Override
+		public EClass getDetailsPage()
   {
-    return detailsPageEClass;
-  }
+		return detailsPageEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getDynamicPage()
+	 * @generated
+	 */
+  @Override
+		public EClass getDynamicPage()
   {
-    return dynamicPageEClass;
-  }
+		return dynamicPageEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getDynamicPage_DisplayedClass()
+	 * @generated
+	 */
+  @Override
+		public EReference getDynamicPage_DisplayedClass()
   {
-    return (EReference)dynamicPageEClass.getEStructuralFeatures().get(0);
-  }
+		return (EReference)dynamicPageEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getStaticPage()
+	 * @generated
+	 */
+  @Override
+		public EClass getStaticPage()
   {
-    return staticPageEClass;
-  }
+		return staticPageEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getLink()
+	 * @generated
+	 */
+  @Override
+		public EClass getLink()
   {
-    return linkEClass;
-  }
+		return linkEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getLink_Target()
+	 * @generated
+	 */
+  @Override
+		public EReference getLink_Target()
   {
-    return (EReference)linkEClass.getEStructuralFeatures().get(0);
-  }
+		return (EReference)linkEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getLink_Source() {
+		return (EReference)linkEClass.getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getNCLink()
+	 * @generated
+	 */
+  @Override
+		public EClass getNCLink()
   {
-    return ncLinkEClass;
-  }
+		return ncLinkEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getCLink()
+	 * @generated
+	 */
+  @Override
+		public EClass getCLink()
   {
-    return cLinkEClass;
-  }
+		return cLinkEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EEnum getSWMLTypes()
+	 * @generated
+	 */
+  @Override
+		public EEnum getSWMLTypes()
   {
-    return swmlTypesEEnum;
-  }
+		return swmlTypesEEnum;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public SwmlFactory getSwmlFactory()
+	 * @generated
+	 */
+  @Override
+		public SwmlFactory getSwmlFactory()
   {
-    return (SwmlFactory)getEFactoryInstance();
-  }
+		return (SwmlFactory)getEFactoryInstance();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private boolean isCreated = false;
 
   /**
-   * Creates the meta-model objects for the package.  This method is
-   * guarded to have no affect on any invocation but its first.
-   * <!-- begin-user-doc -->
+	 * Creates the meta-model objects for the package.  This method is
+	 * guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void createPackageContents()
   {
-    if (isCreated) return;
-    isCreated = true;
+		if (isCreated) return;
+		isCreated = true;
 
-    // Create classes and their features
-    webModelEClass = createEClass(WEB_MODEL);
-    createEReference(webModelEClass, WEB_MODEL__HYPERTEXT);
-    createEReference(webModelEClass, WEB_MODEL__CONTENT);
-    createEAttribute(webModelEClass, WEB_MODEL__NAME);
+		// Create classes and their features
+		webModelEClass = createEClass(WEB_MODEL);
+		createEReference(webModelEClass, WEB_MODEL__HYPERTEXT);
+		createEReference(webModelEClass, WEB_MODEL__CONTENT);
+		createEAttribute(webModelEClass, WEB_MODEL__NAME);
 
-    hypertextLayerEClass = createEClass(HYPERTEXT_LAYER);
-    createEReference(hypertextLayerEClass, HYPERTEXT_LAYER__PAGES);
-    createEReference(hypertextLayerEClass, HYPERTEXT_LAYER__HOME_PAGE);
+		hypertextLayerEClass = createEClass(HYPERTEXT_LAYER);
+		createEReference(hypertextLayerEClass, HYPERTEXT_LAYER__PAGES);
+		createEReference(hypertextLayerEClass, HYPERTEXT_LAYER__HOME_PAGE);
+		createEAttribute(hypertextLayerEClass, HYPERTEXT_LAYER__NAME);
 
-    contentLayerEClass = createEClass(CONTENT_LAYER);
-    createEReference(contentLayerEClass, CONTENT_LAYER__CLASSES);
+		contentLayerEClass = createEClass(CONTENT_LAYER);
+		createEReference(contentLayerEClass, CONTENT_LAYER__CLASSES);
+		createEAttribute(contentLayerEClass, CONTENT_LAYER__NAME);
 
-    classEClass = createEClass(CLASS);
-    createEReference(classEClass, CLASS__ATTRIBUTES);
-    createEReference(classEClass, CLASS__REPRESENTATIVE_ATTRIBUTE);
-    createEAttribute(classEClass, CLASS__NAME);
+		classEClass = createEClass(CLASS);
+		createEReference(classEClass, CLASS__ATTRIBUTES);
+		createEReference(classEClass, CLASS__REPRESENTATIVE_ATTRIBUTE);
+		createEAttribute(classEClass, CLASS__NAME);
 
-    attributeEClass = createEClass(ATTRIBUTE);
-    createEAttribute(attributeEClass, ATTRIBUTE__NAME);
-    createEAttribute(attributeEClass, ATTRIBUTE__TYPE);
+		attributeEClass = createEClass(ATTRIBUTE);
+		createEAttribute(attributeEClass, ATTRIBUTE__NAME);
+		createEAttribute(attributeEClass, ATTRIBUTE__TYPE);
 
-    pageEClass = createEClass(PAGE);
-    createEAttribute(pageEClass, PAGE__NAME);
-    createEReference(pageEClass, PAGE__LINKS);
+		pageEClass = createEClass(PAGE);
+		createEAttribute(pageEClass, PAGE__NAME);
+		createEReference(pageEClass, PAGE__LINKS);
 
-    indexPageEClass = createEClass(INDEX_PAGE);
-    createEAttribute(indexPageEClass, INDEX_PAGE__SIZE);
+		indexPageEClass = createEClass(INDEX_PAGE);
+		createEAttribute(indexPageEClass, INDEX_PAGE__SIZE);
 
-    detailsPageEClass = createEClass(DETAILS_PAGE);
+		detailsPageEClass = createEClass(DETAILS_PAGE);
 
-    dynamicPageEClass = createEClass(DYNAMIC_PAGE);
-    createEReference(dynamicPageEClass, DYNAMIC_PAGE__DISPLAYED_CLASS);
+		dynamicPageEClass = createEClass(DYNAMIC_PAGE);
+		createEReference(dynamicPageEClass, DYNAMIC_PAGE__DISPLAYED_CLASS);
 
-    staticPageEClass = createEClass(STATIC_PAGE);
+		staticPageEClass = createEClass(STATIC_PAGE);
 
-    linkEClass = createEClass(LINK);
-    createEReference(linkEClass, LINK__TARGET);
+		linkEClass = createEClass(LINK);
+		createEReference(linkEClass, LINK__TARGET);
+		createEReference(linkEClass, LINK__SOURCE);
 
-    ncLinkEClass = createEClass(NC_LINK);
+		ncLinkEClass = createEClass(NC_LINK);
 
-    cLinkEClass = createEClass(CLINK);
+		cLinkEClass = createEClass(CLINK);
 
-    // Create enums
-    swmlTypesEEnum = createEEnum(SWML_TYPES);
-  }
+		// Create enums
+		swmlTypesEEnum = createEEnum(SWML_TYPES);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private boolean isInitialized = false;
 
   /**
-   * Complete the initialization of the package and its meta-model.  This
-   * method is guarded to have no affect on any invocation but its first.
-   * <!-- begin-user-doc -->
+	 * Complete the initialization of the package and its meta-model.  This
+	 * method is guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void initializePackageContents()
   {
-    if (isInitialized) return;
-    isInitialized = true;
+		if (isInitialized) return;
+		isInitialized = true;
 
-    // Initialize package
-    setName(eNAME);
-    setNsPrefix(eNS_PREFIX);
-    setNsURI(eNS_URI);
+		// Initialize package
+		setName(eNAME);
+		setNsPrefix(eNS_PREFIX);
+		setNsURI(eNS_URI);
 
-    // Create type parameters
+		// Create type parameters
 
-    // Set bounds for type parameters
+		// Set bounds for type parameters
 
-    // Add supertypes to classes
-    indexPageEClass.getESuperTypes().add(this.getDynamicPage());
-    detailsPageEClass.getESuperTypes().add(this.getDynamicPage());
-    dynamicPageEClass.getESuperTypes().add(this.getPage());
-    staticPageEClass.getESuperTypes().add(this.getPage());
-    ncLinkEClass.getESuperTypes().add(this.getLink());
-    cLinkEClass.getESuperTypes().add(this.getLink());
+		// Add supertypes to classes
+		indexPageEClass.getESuperTypes().add(this.getDynamicPage());
+		detailsPageEClass.getESuperTypes().add(this.getDynamicPage());
+		dynamicPageEClass.getESuperTypes().add(this.getPage());
+		staticPageEClass.getESuperTypes().add(this.getPage());
+		ncLinkEClass.getESuperTypes().add(this.getLink());
+		cLinkEClass.getESuperTypes().add(this.getLink());
 
-    // Initialize classes and features; add operations and parameters
-    initEClass(webModelEClass, WebModel.class, "WebModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getWebModel_Hypertext(), this.getHypertextLayer(), null, "hypertext", null, 1, 1, WebModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getWebModel_Content(), this.getContentLayer(), null, "content", null, 1, 1, WebModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getWebModel_Name(), ecorePackage.getEString(), "name", null, 1, 1, WebModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		// Initialize classes and features; add operations and parameters
+		initEClass(webModelEClass, WebModel.class, "WebModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getWebModel_Hypertext(), this.getHypertextLayer(), null, "hypertext", null, 1, 1, WebModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWebModel_Content(), this.getContentLayer(), null, "content", null, 1, 1, WebModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWebModel_Name(), ecorePackage.getEString(), "name", null, 1, 1, WebModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(hypertextLayerEClass, HypertextLayer.class, "HypertextLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getHypertextLayer_Pages(), this.getPage(), null, "pages", null, 1, -1, HypertextLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getHypertextLayer_HomePage(), this.getPage(), null, "homePage", null, 1, 1, HypertextLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(hypertextLayerEClass, HypertextLayer.class, "HypertextLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getHypertextLayer_Pages(), this.getPage(), null, "pages", null, 1, -1, HypertextLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getHypertextLayer_HomePage(), this.getPage(), null, "homePage", null, 1, 1, HypertextLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHypertextLayer_Name(), ecorePackage.getEString(), "name", null, 1, 1, HypertextLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(contentLayerEClass, ContentLayer.class, "ContentLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getContentLayer_Classes(), this.getClass_(), null, "classes", null, 1, -1, ContentLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(contentLayerEClass, ContentLayer.class, "ContentLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getContentLayer_Classes(), this.getClass_(), null, "classes", null, 1, -1, ContentLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContentLayer_Name(), ecorePackage.getEString(), "name", null, 1, 1, ContentLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(classEClass, swml.Class.class, "Class", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getClass_Attributes(), this.getAttribute(), null, "attributes", null, 1, -1, swml.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getClass_RepresentativeAttribute(), this.getAttribute(), null, "representativeAttribute", null, 1, 1, swml.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getClass_Name(), ecorePackage.getEString(), "name", null, 1, 1, swml.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(classEClass, swml.Class.class, "Class", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getClass_Attributes(), this.getAttribute(), null, "attributes", null, 1, -1, swml.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getClass_RepresentativeAttribute(), this.getAttribute(), null, "representativeAttribute", null, 1, 1, swml.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClass_Name(), ecorePackage.getEString(), "name", null, 1, 1, swml.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getAttribute_Name(), ecorePackage.getEString(), "name", null, 1, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getAttribute_Type(), this.getSWMLTypes(), "type", null, 1, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAttribute_Name(), ecorePackage.getEString(), "name", null, 1, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAttribute_Type(), this.getSWMLTypes(), "type", null, 1, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(pageEClass, Page.class, "Page", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPage_Name(), ecorePackage.getEString(), "name", null, 1, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPage_Links(), this.getLink(), null, "links", null, 0, -1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(pageEClass, Page.class, "Page", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPage_Name(), ecorePackage.getEString(), "name", null, 1, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPage_Links(), this.getLink(), this.getLink_Source(), "links", null, 0, -1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(indexPageEClass, IndexPage.class, "IndexPage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getIndexPage_Size(), ecorePackage.getEInt(), "size", null, 0, 1, IndexPage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(indexPageEClass, IndexPage.class, "IndexPage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getIndexPage_Size(), ecorePackage.getEInt(), "size", null, 0, 1, IndexPage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(detailsPageEClass, DetailsPage.class, "DetailsPage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(detailsPageEClass, DetailsPage.class, "DetailsPage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(dynamicPageEClass, DynamicPage.class, "DynamicPage", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getDynamicPage_DisplayedClass(), this.getClass_(), null, "displayedClass", null, 1, 1, DynamicPage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(dynamicPageEClass, DynamicPage.class, "DynamicPage", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDynamicPage_DisplayedClass(), this.getClass_(), null, "displayedClass", null, 1, 1, DynamicPage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(staticPageEClass, StaticPage.class, "StaticPage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(staticPageEClass, StaticPage.class, "StaticPage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(linkEClass, Link.class, "Link", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getLink_Target(), this.getPage(), null, "target", null, 1, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(linkEClass, Link.class, "Link", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLink_Target(), this.getPage(), null, "target", null, 1, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLink_Source(), this.getPage(), this.getPage_Links(), "source", null, 1, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(ncLinkEClass, NCLink.class, "NCLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(ncLinkEClass, NCLink.class, "NCLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(cLinkEClass, CLink.class, "CLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(cLinkEClass, CLink.class, "CLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    // Initialize enums and add enum literals
-    initEEnum(swmlTypesEEnum, SWMLTypes.class, "SWMLTypes");
-    addEEnumLiteral(swmlTypesEEnum, SWMLTypes.BOOLEAN);
-    addEEnumLiteral(swmlTypesEEnum, SWMLTypes.STRING);
-    addEEnumLiteral(swmlTypesEEnum, SWMLTypes.INTEGER);
-    addEEnumLiteral(swmlTypesEEnum, SWMLTypes.FLOAT);
-    addEEnumLiteral(swmlTypesEEnum, SWMLTypes.EMAIL);
+		// Initialize enums and add enum literals
+		initEEnum(swmlTypesEEnum, SWMLTypes.class, "SWMLTypes");
+		addEEnumLiteral(swmlTypesEEnum, SWMLTypes.BOOLEAN);
+		addEEnumLiteral(swmlTypesEEnum, SWMLTypes.STRING);
+		addEEnumLiteral(swmlTypesEEnum, SWMLTypes.INTEGER);
+		addEEnumLiteral(swmlTypesEEnum, SWMLTypes.FLOAT);
+		addEEnumLiteral(swmlTypesEEnum, SWMLTypes.EMAIL);
 
-    // Create resource
-    createResource(eNS_URI);
+		// Create resource
+		createResource(eNS_URI);
 
-    // Create annotations
-    // gmf
-    createGmfAnnotations();
-    // gmf.diagram
-    createGmf_1Annotations();
-    // gmf.compartment
-    createGmf_2Annotations();
-    // gmf.node
-    createGmf_3Annotations();
-    // gmf.link
-    createGmf_4Annotations();
-  }
+		// Create annotations
+		// gmf
+		createGmfAnnotations();
+		// gmf.diagram
+		createGmf_1Annotations();
+		// gmf.compartment
+		createGmf_2Annotations();
+		// gmf.node
+		createGmf_3Annotations();
+		// gmf.link
+		createGmf_4Annotations();
+	}
 
   /**
-   * Initializes the annotations for <b>gmf</b>.
-   * <!-- begin-user-doc -->
+	 * Initializes the annotations for <b>gmf</b>.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected void createGmfAnnotations()
   {
-    String source = "gmf";		
-    addAnnotation
-      (this, 
-       source, 
-       new String[] 
-       {
-       "foo", "bar"
-       });										
-  }
+		String source = "gmf";
+		addAnnotation
+		  (this,
+		   source,
+		   new String[] {
+		   });
+	}
 
   /**
-   * Initializes the annotations for <b>gmf.diagram</b>.
-   * <!-- begin-user-doc -->
+	 * Initializes the annotations for <b>gmf.diagram</b>.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected void createGmf_1Annotations()
   {
-    String source = "gmf.diagram";			
-    addAnnotation
-      (webModelEClass, 
-       source, 
-       new String[] 
-       {
-       "foo", "bar"
-       });									
-  }
+		String source = "gmf.diagram";
+		addAnnotation
+		  (webModelEClass,
+		   source,
+		   new String[] {
+		   });
+	}
 
   /**
-   * Initializes the annotations for <b>gmf.compartment</b>.
-   * <!-- begin-user-doc -->
+	 * Initializes the annotations for <b>gmf.compartment</b>.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected void createGmf_2Annotations()
   {
-    String source = "gmf.compartment";				
-    addAnnotation
-      (getWebModel_Hypertext(), 
-       source, 
-       new String[] 
-       {
-       "foo", "bar"
-       });		
-    addAnnotation
-      (getWebModel_Content(), 
-       source, 
-       new String[] 
-       {
-       "foo", "bar"
-       });			
-    addAnnotation
-      (getHypertextLayer_Pages(), 
-       source, 
-       new String[] 
-       {
-       "foo", "bar"
-       });			
-    addAnnotation
-      (getContentLayer_Classes(), 
-       source, 
-       new String[] 
-       {
-       "foo", "bar"
-       });			
-  }
+		String source = "gmf.compartment";
+		addAnnotation
+		  (getWebModel_Hypertext(),
+		   source,
+		   new String[] {
+		   });
+		addAnnotation
+		  (getWebModel_Content(),
+		   source,
+		   new String[] {
+		   });
+		addAnnotation
+		  (getHypertextLayer_Pages(),
+		   source,
+		   new String[] {
+		   });
+		addAnnotation
+		  (getContentLayer_Classes(),
+		   source,
+		   new String[] {
+		   });
+	}
 
   /**
-   * Initializes the annotations for <b>gmf.node</b>.
-   * <!-- begin-user-doc -->
+	 * Initializes the annotations for <b>gmf.node</b>.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected void createGmf_3Annotations()
   {
-    String source = "gmf.node";						
-    addAnnotation
-      (hypertextLayerEClass, 
-       source, 
-       new String[] 
-       {
-       "label", "Hypertext",
-       "figure", "rectangle"
-       });			
-    addAnnotation
-      (contentLayerEClass, 
-       source, 
-       new String[] 
-       {
-       "label", "Content",
-       "figure", "rectangle"
-       });			
-    addAnnotation
-      (classEClass, 
-       source, 
-       new String[] 
-       {
-       "label", "name",
-       "figure", "rectangle"
-       });		
-    addAnnotation
-      (pageEClass, 
-       source, 
-       new String[] 
-       {
-       "label", "name",
-       "figure", "rounded"
-       });	
-  }
+		String source = "gmf.node";
+		addAnnotation
+		  (hypertextLayerEClass,
+		   source,
+		   new String[] {
+			   "figure", "rectangle",
+			   "label", "name"
+		   });
+		addAnnotation
+		  (contentLayerEClass,
+		   source,
+		   new String[] {
+			   "label", "name",
+			   "figure", "rectangle"
+		   });
+		addAnnotation
+		  (classEClass,
+		   source,
+		   new String[] {
+			   "label", "name",
+			   "figure", "rectangle"
+		   });
+		addAnnotation
+		  (pageEClass,
+		   source,
+		   new String[] {
+			   "label", "name",
+			   "figure", "rounded"
+		   });
+	}
 
   /**
-   * Initializes the annotations for <b>gmf.link</b>.
-   * <!-- begin-user-doc -->
+	 * Initializes the annotations for <b>gmf.link</b>.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected void createGmf_4Annotations()
   {
-    String source = "gmf.link";												
-    addAnnotation
-      (linkEClass, 
-       source, 
-       new String[] 
-       {
-       "target", "target",
-       "style", "solid",
-       "target.decoration", "filledclosedarrow"
-       });
-  }
+		String source = "gmf.link";
+		addAnnotation
+		  (linkEClass,
+		   source,
+		   new String[] {
+			   "target", "target",
+			   "style", "solid",
+			   "target.decoration", "filledclosedarrow",
+			   "source", "source"
+		   });
+	}
 
 } //SwmlPackageImpl

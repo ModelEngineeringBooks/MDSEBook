@@ -1,6 +1,6 @@
 /*
- * 
- */
+* 
+*/
 package swml.diagram.edit.policies;
 
 import java.util.Iterator;
@@ -28,36 +28,32 @@ import swml.diagram.providers.SwmlElementTypes;
 /**
  * @generated
  */
-public class StaticPageItemSemanticEditPolicy extends
-		SwmlBaseItemSemanticEditPolicy {
+public class StaticPageItemSemanticEditPolicy extends SwmlBaseItemSemanticEditPolicy {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public StaticPageItemSemanticEditPolicy() {
 		super(SwmlElementTypes.StaticPage_3003);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getDestroyElementCommand(DestroyElementRequest req) {
 		View view = (View) getHost().getModel();
-		CompositeTransactionalCommand cmd = new CompositeTransactionalCommand(
-				getEditingDomain(), null);
+		CompositeTransactionalCommand cmd = new CompositeTransactionalCommand(getEditingDomain(), null);
 		cmd.setTransactionNestingEnabled(false);
 		for (Iterator<?> it = view.getTargetEdges().iterator(); it.hasNext();) {
 			Edge incomingLink = (Edge) it.next();
 			if (SwmlVisualIDRegistry.getVisualID(incomingLink) == NCLinkEditPart.VISUAL_ID) {
-				DestroyElementRequest r = new DestroyElementRequest(
-						incomingLink.getElement(), false);
+				DestroyElementRequest r = new DestroyElementRequest(incomingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
 				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 				continue;
 			}
 			if (SwmlVisualIDRegistry.getVisualID(incomingLink) == CLinkEditPart.VISUAL_ID) {
-				DestroyElementRequest r = new DestroyElementRequest(
-						incomingLink.getElement(), false);
+				DestroyElementRequest r = new DestroyElementRequest(incomingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
 				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 				continue;
@@ -66,15 +62,13 @@ public class StaticPageItemSemanticEditPolicy extends
 		for (Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
 			Edge outgoingLink = (Edge) it.next();
 			if (SwmlVisualIDRegistry.getVisualID(outgoingLink) == NCLinkEditPart.VISUAL_ID) {
-				DestroyElementRequest r = new DestroyElementRequest(
-						outgoingLink.getElement(), false);
+				DestroyElementRequest r = new DestroyElementRequest(outgoingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
 				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
 				continue;
 			}
 			if (SwmlVisualIDRegistry.getVisualID(outgoingLink) == CLinkEditPart.VISUAL_ID) {
-				DestroyElementRequest r = new DestroyElementRequest(
-						outgoingLink.getElement(), false);
+				DestroyElementRequest r = new DestroyElementRequest(outgoingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
 				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
 				continue;
@@ -98,22 +92,18 @@ public class StaticPageItemSemanticEditPolicy extends
 	protected Command getCreateRelationshipCommand(CreateRelationshipRequest req) {
 		Command command = req.getTarget() == null ? getStartCreateRelationshipCommand(req)
 				: getCompleteCreateRelationshipCommand(req);
-		return command != null ? command : super
-				.getCreateRelationshipCommand(req);
+		return command != null ? command : super.getCreateRelationshipCommand(req);
 	}
 
 	/**
 	 * @generated
 	 */
-	protected Command getStartCreateRelationshipCommand(
-			CreateRelationshipRequest req) {
+	protected Command getStartCreateRelationshipCommand(CreateRelationshipRequest req) {
 		if (SwmlElementTypes.NCLink_4001 == req.getElementType()) {
-			return getGEFWrapper(new NCLinkCreateCommand(req, req.getSource(),
-					req.getTarget()));
+			return getGEFWrapper(new NCLinkCreateCommand(req, req.getSource(), req.getTarget()));
 		}
 		if (SwmlElementTypes.CLink_4002 == req.getElementType()) {
-			return getGEFWrapper(new CLinkCreateCommand(req, req.getSource(),
-					req.getTarget()));
+			return getGEFWrapper(new CLinkCreateCommand(req, req.getSource(), req.getTarget()));
 		}
 		return null;
 	}
@@ -121,15 +111,12 @@ public class StaticPageItemSemanticEditPolicy extends
 	/**
 	 * @generated
 	 */
-	protected Command getCompleteCreateRelationshipCommand(
-			CreateRelationshipRequest req) {
+	protected Command getCompleteCreateRelationshipCommand(CreateRelationshipRequest req) {
 		if (SwmlElementTypes.NCLink_4001 == req.getElementType()) {
-			return getGEFWrapper(new NCLinkCreateCommand(req, req.getSource(),
-					req.getTarget()));
+			return getGEFWrapper(new NCLinkCreateCommand(req, req.getSource(), req.getTarget()));
 		}
 		if (SwmlElementTypes.CLink_4002 == req.getElementType()) {
-			return getGEFWrapper(new CLinkCreateCommand(req, req.getSource(),
-					req.getTarget()));
+			return getGEFWrapper(new CLinkCreateCommand(req, req.getSource(), req.getTarget()));
 		}
 		return null;
 	}
@@ -140,8 +127,7 @@ public class StaticPageItemSemanticEditPolicy extends
 	 * 
 	 * @generated
 	 */
-	protected Command getReorientRelationshipCommand(
-			ReorientRelationshipRequest req) {
+	protected Command getReorientRelationshipCommand(ReorientRelationshipRequest req) {
 		switch (getVisualID(req)) {
 		case NCLinkEditPart.VISUAL_ID:
 			return getGEFWrapper(new NCLinkReorientCommand(req));

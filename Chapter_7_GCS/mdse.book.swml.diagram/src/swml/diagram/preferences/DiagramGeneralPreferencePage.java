@@ -13,10 +13,9 @@ import swml.diagram.part.SwmlDiagramEditorPlugin;
 public class DiagramGeneralPreferencePage extends DiagramsPreferencePage {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public DiagramGeneralPreferencePage() {
-		setPreferenceStore(SwmlDiagramEditorPlugin.getInstance()
-				.getPreferenceStore());
+		setPreferenceStore(SwmlDiagramEditorPlugin.getInstance().getPreferenceStore());
 	}
 }

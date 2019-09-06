@@ -1,6 +1,6 @@
 /*
- * 
- */
+* 
+*/
 package swml.diagram.edit.policies;
 
 import org.eclipse.gef.commands.Command;
@@ -14,19 +14,18 @@ import swml.diagram.providers.SwmlElementTypes;
 /**
  * @generated
  */
-public class HypertextLayerHypertextLayerPagesCompartmentItemSemanticEditPolicy
-		extends SwmlBaseItemSemanticEditPolicy {
+public class HypertextLayerHypertextLayerPagesCompartmentItemSemanticEditPolicy extends SwmlBaseItemSemanticEditPolicy {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public HypertextLayerHypertextLayerPagesCompartmentItemSemanticEditPolicy() {
 		super(SwmlElementTypes.HypertextLayer_2001);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getCreateCommand(CreateElementRequest req) {
 		if (SwmlElementTypes.IndexPage_3001 == req.getElementType()) {
 			return getGEFWrapper(new IndexPageCreateCommand(req));

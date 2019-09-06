@@ -16,22 +16,21 @@ import swml.diagram.part.SwmlVisualIDRegistry;
 public class SwmlValidationProvider {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private static boolean constraintsActive = false;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static boolean shouldConstraintsBePrivate() {
 		return false;
 	}
 
 	/**
-	 * @generated
-	 */
-	public static void runWithConstraints(
-			TransactionalEditingDomain editingDomain, Runnable operation) {
+	* @generated
+	*/
+	public static void runWithConstraints(TransactionalEditingDomain editingDomain, Runnable operation) {
 		final Runnable op = operation;
 		Runnable task = new Runnable() {
 			public void run() {
@@ -47,8 +46,7 @@ public class SwmlValidationProvider {
 			try {
 				editingDomain.runExclusive(task);
 			} catch (Exception e) {
-				SwmlDiagramEditorPlugin.getInstance().logError(
-						"Validation failed", e); //$NON-NLS-1$
+				SwmlDiagramEditorPlugin.getInstance().logError("Validation failed", e); //$NON-NLS-1$
 			}
 		} else {
 			task.run();
@@ -56,16 +54,15 @@ public class SwmlValidationProvider {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	static boolean isInDefaultEditorContext(Object object) {
 		if (shouldConstraintsBePrivate() && !constraintsActive) {
 			return false;
 		}
 		if (object instanceof View) {
 			return constraintsActive
-					&& WebModelEditPart.MODEL_ID.equals(SwmlVisualIDRegistry
-							.getModelID((View) object));
+					&& WebModelEditPart.MODEL_ID.equals(SwmlVisualIDRegistry.getModelID((View) object));
 		}
 		return true;
 	}

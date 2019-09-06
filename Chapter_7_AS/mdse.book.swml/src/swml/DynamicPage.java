@@ -14,10 +14,10 @@ package swml;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link swml.DynamicPage#getDisplayedClass <em>Displayed Class</em>}</li>
  * </ul>
- * </p>
  *
  * @see swml.SwmlPackage#getDynamicPage()
  * @model abstract="true"
@@ -26,29 +26,29 @@ package swml;
 public interface DynamicPage extends Page
 {
   /**
-   * Returns the value of the '<em><b>Displayed Class</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Displayed Class</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Displayed Class</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Displayed Class</em>' reference.
-   * @see #setDisplayedClass(swml.Class)
-   * @see swml.SwmlPackage#getDynamicPage_DisplayedClass()
-   * @model required="true"
-   * @generated
-   */
+	 * @return the value of the '<em>Displayed Class</em>' reference.
+	 * @see #setDisplayedClass(swml.Class)
+	 * @see swml.SwmlPackage#getDynamicPage_DisplayedClass()
+	 * @model required="true"
+	 * @generated
+	 */
   swml.Class getDisplayedClass();
 
   /**
-   * Sets the value of the '{@link swml.DynamicPage#getDisplayedClass <em>Displayed Class</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link swml.DynamicPage#getDisplayedClass <em>Displayed Class</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Displayed Class</em>' reference.
-   * @see #getDisplayedClass()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Displayed Class</em>' reference.
+	 * @see #getDisplayedClass()
+	 * @generated
+	 */
   void setDisplayedClass(swml.Class value);
 
 } // DynamicPage

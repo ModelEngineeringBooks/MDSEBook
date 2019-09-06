@@ -18,46 +18,44 @@ import swml.diagram.edit.policies.CLinkItemSemanticEditPolicy;
 /**
  * @generated
  */
-public class CLinkEditPart extends ConnectionNodeEditPart implements
-		ITreeBranchEditPart {
+public class CLinkEditPart extends ConnectionNodeEditPart implements ITreeBranchEditPart {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static final int VISUAL_ID = 4002;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public CLinkEditPart(View view) {
 		super(view);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
-		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
-				new CLinkItemSemanticEditPolicy());
+		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new CLinkItemSemanticEditPolicy());
 	}
 
 	/**
-	 * Creates figure for this edit part.
-	 * 
-	 * Body of this method does not depend on settings in generation model
-	 * so you may safely remove <i>generated</i> tag and modify it.
-	 * 
-	 * @generated
-	 */
+	* Creates figure for this edit part.
+	* 
+	* Body of this method does not depend on settings in generation model
+	* so you may safely remove <i>generated</i> tag and modify it.
+	* 
+	* @generated
+	*/
 
 	protected Connection createConnectionFigure() {
 		return new CLinkFigure();
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public CLinkFigure getPrimaryShape() {
 		return (CLinkFigure) getFigure();
 	}

@@ -21,23 +21,23 @@ import swml.diagram.edit.policies.SwmlBaseItemSemanticEditPolicy;
 public class NCLinkReorientCommand extends EditElementCommand {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private final int reorientDirection;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private final EObject oldEnd;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private final EObject newEnd;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public NCLinkReorientCommand(ReorientRelationshipRequest request) {
 		super(request.getLabel(), request.getRelationship(), request);
 		reorientDirection = request.getDirection();
@@ -46,8 +46,8 @@ public class NCLinkReorientCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public boolean canExecute() {
 		if (false == getElementToEdit() instanceof NCLink) {
 			return false;
@@ -62,40 +62,43 @@ public class NCLinkReorientCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected boolean canReorientSource() {
 		if (!(oldEnd instanceof Page && newEnd instanceof Page)) {
 			return false;
 		}
 		Page target = getLink().getTarget();
-		return SwmlBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistNCLink_4001(getLink(), getNewSource(), target);
+		if (!(getLink().eContainer() instanceof Page)) {
+			return false;
+		}
+		Page container = (Page) getLink().eContainer();
+		return SwmlBaseItemSemanticEditPolicy.getLinkConstraints().canExistNCLink_4001(container, getLink(),
+				getNewSource(), target);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected boolean canReorientTarget() {
 		if (!(oldEnd instanceof Page && newEnd instanceof Page)) {
 			return false;
 		}
+		Page source = getLink().getSource();
 		if (!(getLink().eContainer() instanceof Page)) {
 			return false;
 		}
-		Page source = (Page) getLink().eContainer();
-		return SwmlBaseItemSemanticEditPolicy.getLinkConstraints()
-				.canExistNCLink_4001(getLink(), source, getNewTarget());
+		Page container = (Page) getLink().eContainer();
+		return SwmlBaseItemSemanticEditPolicy.getLinkConstraints().canExistNCLink_4001(container, getLink(), source,
+				getNewTarget());
 	}
 
 	/**
-	 * @generated
-	 */
-	protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
-			IAdaptable info) throws ExecutionException {
+	* @generated
+	*/
+	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		if (!canExecute()) {
-			throw new ExecutionException(
-					"Invalid arguments in reorient link command"); //$NON-NLS-1$
+			throw new ExecutionException("Invalid arguments in reorient link command"); //$NON-NLS-1$
 		}
 		if (reorientDirection == ReorientRelationshipRequest.REORIENT_SOURCE) {
 			return reorientSource();
@@ -107,53 +110,52 @@ public class NCLinkReorientCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected CommandResult reorientSource() throws ExecutionException {
-		getOldSource().getLinks().remove(getLink());
-		getNewSource().getLinks().add(getLink());
+		getLink().setSource(getNewSource());
 		return CommandResult.newOKCommandResult(getLink());
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected CommandResult reorientTarget() throws ExecutionException {
 		getLink().setTarget(getNewTarget());
 		return CommandResult.newOKCommandResult(getLink());
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected NCLink getLink() {
 		return (NCLink) getElementToEdit();
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Page getOldSource() {
 		return (Page) oldEnd;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Page getNewSource() {
 		return (Page) newEnd;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Page getOldTarget() {
 		return (Page) oldEnd;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Page getNewTarget() {
 		return (Page) newEnd;
 	}

@@ -31,278 +31,275 @@ import swml.SwmlPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link swml.impl.ClassImpl#getAttributes <em>Attributes</em>}</li>
  *   <li>{@link swml.impl.ClassImpl#getRepresentativeAttribute <em>Representative Attribute</em>}</li>
  *   <li>{@link swml.impl.ClassImpl#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public class ClassImpl extends EObjectImpl implements swml.Class
 {
   /**
-   * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getAttributes()
-   * @generated
-   * @ordered
-   */
+	 * @see #getAttributes()
+	 * @generated
+	 * @ordered
+	 */
   protected EList<Attribute> attributes;
 
   /**
-   * The cached value of the '{@link #getRepresentativeAttribute() <em>Representative Attribute</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getRepresentativeAttribute() <em>Representative Attribute</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRepresentativeAttribute()
-   * @generated
-   * @ordered
-   */
+	 * @see #getRepresentativeAttribute()
+	 * @generated
+	 * @ordered
+	 */
   protected Attribute representativeAttribute;
 
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
   protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
   protected String name = NAME_EDEFAULT;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected ClassImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return SwmlPackage.Literals.CLASS;
-  }
+		return SwmlPackage.Literals.CLASS;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<Attribute> getAttributes()
+	 * @generated
+	 */
+  @Override
+		public EList<Attribute> getAttributes()
   {
-    if (attributes == null)
-    {
-      attributes = new EObjectContainmentEList<Attribute>(Attribute.class, this, SwmlPackage.CLASS__ATTRIBUTES);
-    }
-    return attributes;
-  }
+		if (attributes == null) {
+			attributes = new EObjectContainmentEList<Attribute>(Attribute.class, this, SwmlPackage.CLASS__ATTRIBUTES);
+		}
+		return attributes;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public Attribute getRepresentativeAttribute()
+	 * @generated
+	 */
+  @Override
+		public Attribute getRepresentativeAttribute()
   {
-    if (representativeAttribute != null && representativeAttribute.eIsProxy())
-    {
-      InternalEObject oldRepresentativeAttribute = (InternalEObject)representativeAttribute;
-      representativeAttribute = (Attribute)eResolveProxy(oldRepresentativeAttribute);
-      if (representativeAttribute != oldRepresentativeAttribute)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SwmlPackage.CLASS__REPRESENTATIVE_ATTRIBUTE, oldRepresentativeAttribute, representativeAttribute));
-      }
-    }
-    return representativeAttribute;
-  }
+		if (representativeAttribute != null && representativeAttribute.eIsProxy()) {
+			InternalEObject oldRepresentativeAttribute = (InternalEObject)representativeAttribute;
+			representativeAttribute = (Attribute)eResolveProxy(oldRepresentativeAttribute);
+			if (representativeAttribute != oldRepresentativeAttribute) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SwmlPackage.CLASS__REPRESENTATIVE_ATTRIBUTE, oldRepresentativeAttribute, representativeAttribute));
+			}
+		}
+		return representativeAttribute;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Attribute basicGetRepresentativeAttribute()
   {
-    return representativeAttribute;
-  }
+		return representativeAttribute;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setRepresentativeAttribute(Attribute newRepresentativeAttribute)
+	 * @generated
+	 */
+  @Override
+		public void setRepresentativeAttribute(Attribute newRepresentativeAttribute)
   {
-    Attribute oldRepresentativeAttribute = representativeAttribute;
-    representativeAttribute = newRepresentativeAttribute;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SwmlPackage.CLASS__REPRESENTATIVE_ATTRIBUTE, oldRepresentativeAttribute, representativeAttribute));
-  }
+		Attribute oldRepresentativeAttribute = representativeAttribute;
+		representativeAttribute = newRepresentativeAttribute;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SwmlPackage.CLASS__REPRESENTATIVE_ATTRIBUTE, oldRepresentativeAttribute, representativeAttribute));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getName()
+	 * @generated
+	 */
+  @Override
+		public String getName()
   {
-    return name;
-  }
+		return name;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
+	 * @generated
+	 */
+  @Override
+		public void setName(String newName)
   {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SwmlPackage.CLASS__NAME, oldName, name));
-  }
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SwmlPackage.CLASS__NAME, oldName, name));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    switch (featureID)
-    {
-      case SwmlPackage.CLASS__ATTRIBUTES:
-        return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
+		switch (featureID) {
+			case SwmlPackage.CLASS__ATTRIBUTES:
+				return ((InternalEList<?>)getAttributes()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case SwmlPackage.CLASS__ATTRIBUTES:
-        return getAttributes();
-      case SwmlPackage.CLASS__REPRESENTATIVE_ATTRIBUTE:
-        if (resolve) return getRepresentativeAttribute();
-        return basicGetRepresentativeAttribute();
-      case SwmlPackage.CLASS__NAME:
-        return getName();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case SwmlPackage.CLASS__ATTRIBUTES:
+				return getAttributes();
+			case SwmlPackage.CLASS__REPRESENTATIVE_ATTRIBUTE:
+				if (resolve) return getRepresentativeAttribute();
+				return basicGetRepresentativeAttribute();
+			case SwmlPackage.CLASS__NAME:
+				return getName();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case SwmlPackage.CLASS__ATTRIBUTES:
-        getAttributes().clear();
-        getAttributes().addAll((Collection<? extends Attribute>)newValue);
-        return;
-      case SwmlPackage.CLASS__REPRESENTATIVE_ATTRIBUTE:
-        setRepresentativeAttribute((Attribute)newValue);
-        return;
-      case SwmlPackage.CLASS__NAME:
-        setName((String)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case SwmlPackage.CLASS__ATTRIBUTES:
+				getAttributes().clear();
+				getAttributes().addAll((Collection<? extends Attribute>)newValue);
+				return;
+			case SwmlPackage.CLASS__REPRESENTATIVE_ATTRIBUTE:
+				setRepresentativeAttribute((Attribute)newValue);
+				return;
+			case SwmlPackage.CLASS__NAME:
+				setName((String)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case SwmlPackage.CLASS__ATTRIBUTES:
-        getAttributes().clear();
-        return;
-      case SwmlPackage.CLASS__REPRESENTATIVE_ATTRIBUTE:
-        setRepresentativeAttribute((Attribute)null);
-        return;
-      case SwmlPackage.CLASS__NAME:
-        setName(NAME_EDEFAULT);
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case SwmlPackage.CLASS__ATTRIBUTES:
+				getAttributes().clear();
+				return;
+			case SwmlPackage.CLASS__REPRESENTATIVE_ATTRIBUTE:
+				setRepresentativeAttribute((Attribute)null);
+				return;
+			case SwmlPackage.CLASS__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case SwmlPackage.CLASS__ATTRIBUTES:
-        return attributes != null && !attributes.isEmpty();
-      case SwmlPackage.CLASS__REPRESENTATIVE_ATTRIBUTE:
-        return representativeAttribute != null;
-      case SwmlPackage.CLASS__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case SwmlPackage.CLASS__ATTRIBUTES:
+				return attributes != null && !attributes.isEmpty();
+			case SwmlPackage.CLASS__REPRESENTATIVE_ATTRIBUTE:
+				return representativeAttribute != null;
+			case SwmlPackage.CLASS__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		}
+		return super.eIsSet(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String toString()
   {
-    if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
-  }
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
+	}
 
 } //ClassImpl
