@@ -10,8 +10,7 @@
       name="h1">
     <pages xsi:type="swml:StaticPage"
         name="HomePage">
-      <links
-          xsi:type="swml:NCLink"
+      <links          xsi:type="swml:NCLink"
           target="//@hypertext/@pages.1"/>
     </pages>
     <pages xsi:type="swml:IndexPage"
